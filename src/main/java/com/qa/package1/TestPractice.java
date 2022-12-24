@@ -1,56 +1,69 @@
 package com.qa.package1;
 
+import java.net.URL;
+import java.util.ArrayList;
 import java.util.Arrays;
+import java.util.List;
+
+import javax.net.ssl.HttpsURLConnection;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
-
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestPractice {
-	
+
 	public static WebDriver driver;
 
 	public static void main(String[] args) throws Throwable {
-		// TODO Auto-generated method stub
 		
-		 // TODO Auto-generated method stub
-			WebDriverManager.chromedriver().setup();
-			ChromeOptions opt = new ChromeOptions();
-			opt.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking","enable-automation")); 
-			driver= new ChromeDriver(opt);
-			
-			  driver.get("https://opensource-demo.orangehrmlive.com/web/index.php/auth/login");
-			  Thread.sleep(6000);
-			  
-			
-			  
-			  driver.findElement(By.xpath("//button[@type='submit']")).click();
-			  
-			  if(driver.findElement(By.xpath("//div[@class='orangehrm-login-logo']//img[@alt='orangehrm-logo']"))
-					  .isDisplayed())
-			  {
-				  System.out.println("Logo is visible");
-			  }
-			  
+		WebDriverManager.chromedriver().setup();
+		ChromeOptions opt = new ChromeOptions();
+		opt.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking", "enable-automation"));
+		driver = new ChromeDriver(opt);
 
-			  if(driver.findElement(By.xpath("//div[@class='orangehrm-login-branding']//img[@alt='company-branding']"))
-					  .isDisplayed())
-			  {
-				  System.out.println(" TOP Logo is visible");
-			  }
-			  
-			
-			  
-			
-			  
-			  Thread.sleep(3000);
-			  
-			
-			  driver.quit();
+		driver.get("https://www.amazon.in/");
+		Thread.sleep(5000);
 
+		List<WebElement> links = driver.findElements(By.tagName("a"));
+		System.out.println("No of links are " + links.size());
+
+		List<String> urlList = new ArrayList<String>();
+
+		for (WebElement e : links) {
+			String url = e.getAttribute("href");
+			urlList.add(url);
+		}
+
+
+		long srTime = System.currentTimeMillis();
+		urlList.parallelStream().forEach(e -> checkBrokenLink(e));
+		long endTime = System.currentTimeMillis();
+
+		System.out.println("Total time taken :" + (endTime - srTime));
+
+		driver.quit();
+
+	}
+
+	public static void checkBrokenLink(String linkUrl) {
+		try {
+			URL url = new URL(linkUrl);
+			HttpsURLConnection httpsURLConnection = (HttpsURLConnection) url.openConnection();
+			httpsURLConnection.setConnectTimeout(5000);
+			httpsURLConnection.connect();
+
+			if (httpsURLConnection.getResponseCode() >= 400) {
+				System.out.println(linkUrl + " ----> " + httpsURLConnection.getResponseMessage() + " is broken link");
+			} else {
+				System.out.println(linkUrl + " ----> " + httpsURLConnection.getResponseMessage());
+			}
+		} catch (Exception e) {
+			
+		}
 	}
 
 }
