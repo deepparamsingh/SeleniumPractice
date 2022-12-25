@@ -1,46 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "https://testng.org/testng-1.0.dtd">
-<suite thread-count="2" parallel="tests" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="2" parallel="tests" name="EdgeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="come.qa.testcases.AssignmentOneTest">
+      <class name="come.qa.testcases.AssignmentThreeTest">
         <methods>
-          <include name="tearDown"/>
-          <include name="verifySiteLogoTest"/>
-          <include name="verifySocialLinksWithMAPTest"/>
           <include name="setup"/>
-          <include name="verifyYTlinkExistTest"/>
-          <include name="verifyURLEndsWithTest"/>
-          <include name="verifyURLContainsTest"/>
-          <include name="verifySocialLinksTest"/>
-        </methods>
-      </class> <!-- come.qa.testcases.AssignmentOneTest -->
-      <class name="come.qa.testcases.AssignmentTwoTest">
-        <methods>
-          <include name="verifyEmptyUNvalidationTest"/>
-          <include name="verifyInvalidAlertTest"/>
-          <include name="verifyPasswordValidationTest"/>
+          <include name="compareTabListwithActualTest"/>
           <include name="tearDown"/>
-          <include name="loginLogoutTest"/>
-          <include name="setup"/>
         </methods>
-      </class> <!-- come.qa.testcases.AssignmentTwoTest -->
+      </class> <!-- come.qa.testcases.AssignmentThreeTest -->
     </classes>
-  </test> <!-- EdgeTest(failed) -->
-  <test thread-count="2" parallel="tests" name="ChromeTest(failed)">
-    <parameter name="browser" value="Chrome"/>
-    <classes>
-      <class name="come.qa.testcases.AssignmentTwoTest">
-        <methods>
-          <include name="verifyEmptyUNvalidationTest"/>
-          <include name="verifyInvalidAlertTest"/>
-          <include name="verifyPasswordValidationTest"/>
-          <include name="tearDown"/>
-          <include name="loginLogoutTest"/>
-          <include name="setup"/>
-        </methods>
-      </class> <!-- come.qa.testcases.AssignmentTwoTest -->
-    </classes>
-  </test> <!-- ChromeTest(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

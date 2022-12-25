@@ -3,6 +3,7 @@ package com.qa.package1;
 import java.time.Duration;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,6 +12,9 @@ import org.openqa.selenium.support.ui.Select;
 import com.qa.base.Testbase;
 
 public class AssignmentFour extends Testbase {
+	
+	
+	Logger log = Logger.getLogger(AssignmentFour.class);
 	
 	@FindBy(xpath="//h2[contains(text(),'Facebook helps you connect and share with the people in your life.')]")
 	WebElement H2text;
@@ -74,7 +78,7 @@ public class AssignmentFour extends Testbase {
 			String footerLnkValue= footerLnk.getText();
 			if(footerLnkValue.equalsIgnoreCase(word))
 			{
-				System.out.println(word+" link found!!");
+				log.info(word+" link found!!");
 				footerLnk.click();
 				break;
 			}

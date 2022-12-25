@@ -2,6 +2,7 @@ package com.qa.package1;
 
 import java.time.Duration;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -10,7 +11,7 @@ import com.qa.base.Testbase;
 
 public class AssignmentTwo extends Testbase {
 	
-	
+	Logger log = Logger.getLogger(AssignmentTwo.class);
 	
 	@FindBy(xpath="//input[@placeholder='Username']")
 	WebElement userName;
@@ -36,10 +37,10 @@ public class AssignmentTwo extends Testbase {
 	{
 		String UNcssProp= userName.getCssValue("border");	
 		String[] splited = UNcssProp.split("\\s+");
-		System.out.println("value at first index is :"+splited[0]);
+		log.info("value at first index is :"+splited[0]);
 		if(splited[0].equalsIgnoreCase("1px"))
 			{
-			System.out.println("Border value is 1px");
+			log.info("Border value is 1px");
 			return true;
 			}
 		return false;
@@ -65,7 +66,7 @@ public class AssignmentTwo extends Testbase {
 			String invalidCredMSG=invalidCred.getText();
 			if(invalidCredMSG.equals("Invalid credentials"))
 			{
-				System.out.println("User credentials are not Valid: "+ invalidCredMSG);
+				log.info("User credentials are not Valid: "+ invalidCredMSG);
 				return true;
 			}
 			

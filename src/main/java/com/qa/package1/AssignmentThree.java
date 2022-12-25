@@ -3,6 +3,7 @@ package com.qa.package1;
 import java.util.Arrays;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -11,13 +12,13 @@ import com.qa.base.Testbase;
 
 public class AssignmentThree extends Testbase{
 	
-
+	Logger log = Logger.getLogger(AssignmentThree.class);
 	
 	@FindBy(css="ul[class*='oxd-main-menu']>li")
 	List <WebElement> allMainTabs;
 	
 	 String[] array = {"Admin", "PIM","Leave","Time","Recruitment","My Info","Performance",
-			 				"Dashboard","Directory","Maintenance","Buz"};
+			 				"Dashboard","Directory","Maintenance","Buzz"};
 	List<String> list = Arrays.asList(array);
 	    
 	
@@ -40,11 +41,11 @@ public class AssignmentThree extends Testbase{
 		
 		if(!actual.equals(existing))
 				{
-			System.out.println("****** "+actual+" not matched with "+existing+" ******");
+			log.info("****** "+actual+" not matched with "+existing+" ******");
 			return false;
 				}
 		else {
-			System.out.println(actual+" equals to "+ existing);			
+			log.info(actual+" equals to "+ existing);			
 			}
 	}
 	return true;

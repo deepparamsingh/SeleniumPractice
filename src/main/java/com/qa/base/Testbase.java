@@ -12,7 +12,6 @@ import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
 import org.apache.commons.io.FileUtils;
-import org.apache.log4j.Logger;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -33,7 +32,7 @@ public class Testbase {
 	public static WebDriver driver;
 	public static Properties prop;
 	
-	public static Logger logger;
+	//public static Logger logger;
 	
 	
 	

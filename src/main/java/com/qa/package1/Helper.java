@@ -2,6 +2,7 @@ package com.qa.package1;
 
 import java.time.Duration;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -10,7 +11,7 @@ import com.qa.base.Testbase;
 
 public class Helper extends Testbase {
 	
-	
+	Logger log = Logger.getLogger(Helper.class);
 	
 	@FindBy(xpath="//button[@type='submit']")
 	WebElement loginButton;
@@ -41,7 +42,7 @@ public class Helper extends Testbase {
 	{
 		if(captureURL().contains(word))
 		{
-			System.out.println("Current URL contains :"+word);
+			log.info("Current URL contains :"+word);
 			return true;
 		}
 		return false;

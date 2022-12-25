@@ -4,6 +4,7 @@ import java.time.Duration;
 import java.util.HashMap;
 import java.util.List;
 
+import org.apache.log4j.Logger;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -12,7 +13,7 @@ import com.qa.base.Testbase;
 
 public class AssignmentOne extends Testbase {
 	
-	
+	Logger log = Logger.getLogger(AssignmentOne.class);
 	
 			//PageFactory
 	
@@ -45,10 +46,10 @@ public class AssignmentOne extends Testbase {
 	{
 		
 		int totallinks = socialLinks.size();
-		System.out.println("Total social links are: "+totallinks);
+		log.info("Total social links are: "+totallinks);
 		for( WebElement links : socialLinks)
 		{
-			System.out.println(links.getAttribute("href"));
+			log.info(links.getAttribute("href"));
 		}
 		return totallinks;
 		
@@ -59,14 +60,14 @@ public class AssignmentOne extends Testbase {
 		
 		boolean result = false;
 			int totallinks = socialLinks.size();
-			System.out.println("Total social links are: "+totallinks);
+			log.info("Total social links are: "+totallinks);
 			for( WebElement links : socialLinks)
 			{
 				
 				String link= links.getAttribute("href");
 				if(link.contains("youtube"))
 				{
-					System.out.println("YouTube Link Found !!!  "+link);
+					log.info("YouTube Link Found !!!  "+link);
 					result = true;
 					break;
 				}
@@ -90,7 +91,7 @@ public class AssignmentOne extends Testbase {
 			    i++;
 			    
 		}
-		System.out.println(capitalCities);
+		log.info(capitalCities);
 		
 	}
 
