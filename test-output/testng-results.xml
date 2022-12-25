@@ -1,97 +1,171 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="7" passed="7" failed="0" skipped="0">
+<testng-results ignored="0" total="13" passed="13" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-24T18:46:58 IST" name="Default suite" finished-at="2022-12-24T18:47:36 IST" duration-ms="37874">
+  <suite started-at="2022-12-25T18:33:55 IST" name="Suite" finished-at="2022-12-25T18:35:23 IST" duration-ms="87408">
     <groups>
     </groups>
-    <test started-at="2022-12-24T18:46:58 IST" name="Default test" finished-at="2022-12-24T18:47:36 IST" duration-ms="37874">
+    <test started-at="2022-12-25T18:33:55 IST" name="ChromeTest" finished-at="2022-12-25T18:35:23 IST" duration-ms="87408">
       <class name="come.qa.testcases.AssignmentOneTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:46:59 IST" name="setup" finished-at="2022-12-24T18:47:05 IST" duration-ms="6144" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:14 IST" name="setup" finished-at="2022-12-25T18:34:19 IST" duration-ms="4616" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyTitleContainsTest()[pri:1, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:05 IST" name="verifyTitleContainsTest" finished-at="2022-12-24T18:47:05 IST" duration-ms="20" status="PASS">
+        <test-method signature="verifyTitleContainsTest()[pri:1, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:19 IST" name="verifyTitleContainsTest" finished-at="2022-12-25T18:34:19 IST" duration-ms="14" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyTitleContainsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:05 IST" name="tearDown" finished-at="2022-12-24T18:47:05 IST" duration-ms="266" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:19 IST" name="tearDown" finished-at="2022-12-25T18:34:19 IST" duration-ms="191" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:05 IST" name="setup" finished-at="2022-12-24T18:47:09 IST" duration-ms="4072" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:19 IST" name="setup" finished-at="2022-12-25T18:34:23 IST" duration-ms="4155" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyURLContainsTest()[pri:1, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:09 IST" name="verifyURLContainsTest" finished-at="2022-12-24T18:47:09 IST" duration-ms="9" status="PASS">
+        <test-method signature="verifyURLContainsTest()[pri:1, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:23 IST" name="verifyURLContainsTest" finished-at="2022-12-25T18:34:23 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyURLContainsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:09 IST" name="tearDown" finished-at="2022-12-24T18:47:09 IST" duration-ms="189" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:23 IST" name="tearDown" finished-at="2022-12-25T18:34:23 IST" duration-ms="251" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:09 IST" name="setup" finished-at="2022-12-24T18:47:13 IST" duration-ms="4074" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:23 IST" name="setup" finished-at="2022-12-25T18:34:28 IST" duration-ms="4284" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyURLEndsWithTest()[pri:1, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:13 IST" name="verifyURLEndsWithTest" finished-at="2022-12-24T18:47:13 IST" duration-ms="13" status="PASS">
+        <test-method signature="verifyURLEndsWithTest()[pri:1, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:28 IST" name="verifyURLEndsWithTest" finished-at="2022-12-25T18:34:28 IST" duration-ms="11" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyURLEndsWithTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:13 IST" name="tearDown" finished-at="2022-12-24T18:47:14 IST" duration-ms="210" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:28 IST" name="tearDown" finished-at="2022-12-25T18:34:28 IST" duration-ms="192" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:14 IST" name="setup" finished-at="2022-12-24T18:47:18 IST" duration-ms="4248" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:40 IST" name="setup" finished-at="2022-12-25T18:34:47 IST" duration-ms="6593" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySiteLogoTest()[pri:2, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:18 IST" name="verifySiteLogoTest" finished-at="2022-12-24T18:47:19 IST" duration-ms="1109" status="PASS">
+        <test-method signature="verifySiteLogoTest()[pri:2, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:47 IST" name="verifySiteLogoTest" finished-at="2022-12-25T18:34:48 IST" duration-ms="1661" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySiteLogoTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:19 IST" name="tearDown" finished-at="2022-12-24T18:47:19 IST" duration-ms="226" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:48 IST" name="tearDown" finished-at="2022-12-25T18:34:48 IST" duration-ms="221" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:19 IST" name="setup" finished-at="2022-12-24T18:47:26 IST" duration-ms="6771" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:34:57 IST" name="setup" finished-at="2022-12-25T18:35:01 IST" duration-ms="4320" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySocialLinksTest()[pri:3, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:26 IST" name="verifySocialLinksTest" finished-at="2022-12-24T18:47:27 IST" duration-ms="644" status="PASS">
+        <test-method signature="verifySocialLinksTest()[pri:3, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:01 IST" name="verifySocialLinksTest" finished-at="2022-12-25T18:35:02 IST" duration-ms="673" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySocialLinksTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:27 IST" name="tearDown" finished-at="2022-12-24T18:47:27 IST" duration-ms="200" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:02 IST" name="tearDown" finished-at="2022-12-25T18:35:02 IST" duration-ms="252" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:27 IST" name="setup" finished-at="2022-12-24T18:47:31 IST" duration-ms="4044" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:12 IST" name="setup" finished-at="2022-12-25T18:35:17 IST" duration-ms="4582" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifySocialLinksWithMAPTest()[pri:4, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:31 IST" name="verifySocialLinksWithMAPTest" finished-at="2022-12-24T18:47:31 IST" duration-ms="553" status="PASS">
+        <test-method signature="verifySocialLinksWithMAPTest()[pri:4, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:17 IST" name="verifySocialLinksWithMAPTest" finished-at="2022-12-25T18:35:17 IST" duration-ms="660" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifySocialLinksWithMAPTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:31 IST" name="tearDown" finished-at="2022-12-24T18:47:32 IST" duration-ms="205" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:17 IST" name="tearDown" finished-at="2022-12-25T18:35:18 IST" duration-ms="261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:32 IST" name="setup" finished-at="2022-12-24T18:47:36 IST" duration-ms="4001" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:18 IST" name="setup" finished-at="2022-12-25T18:35:22 IST" duration-ms="4105" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="verifyYTlinkExistTest()[pri:5, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:36 IST" name="verifyYTlinkExistTest" finished-at="2022-12-24T18:47:36 IST" duration-ms="599" status="PASS">
+        <test-method signature="verifyYTlinkExistTest()[pri:5, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:22 IST" name="verifyYTlinkExistTest" finished-at="2022-12-25T18:35:22 IST" duration-ms="633" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- verifyYTlinkExistTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@58d75e99]" started-at="2022-12-24T18:47:36 IST" name="tearDown" finished-at="2022-12-24T18:47:36 IST" duration-ms="194" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@4dbb42b7]" started-at="2022-12-25T18:35:22 IST" name="tearDown" finished-at="2022-12-25T18:35:23 IST" duration-ms="258" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- come.qa.testcases.AssignmentOneTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="come.qa.testcases.AssignmentTwoTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:33:55 IST" name="setup" finished-at="2022-12-25T18:34:02 IST" duration-ms="6972" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyCSSpropertyTest()[pri:1, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:02 IST" name="verifyCSSpropertyTest" finished-at="2022-12-25T18:34:03 IST" duration-ms="469" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyCSSpropertyTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:03 IST" name="tearDown" finished-at="2022-12-25T18:34:03 IST" duration-ms="297" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:03 IST" name="setup" finished-at="2022-12-25T18:34:07 IST" duration-ms="4038" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyEmptyPasswordValidationTest()[pri:1, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:07 IST" name="verifyEmptyPasswordValidationTest" finished-at="2022-12-25T18:34:08 IST" duration-ms="858" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyPasswordValidationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:08 IST" name="tearDown" finished-at="2022-12-25T18:34:08 IST" duration-ms="262" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:08 IST" name="setup" finished-at="2022-12-25T18:34:13 IST" duration-ms="4984" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyEmptyUNvalidationTest()[pri:1, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:13 IST" name="verifyEmptyUNvalidationTest" finished-at="2022-12-25T18:34:14 IST" duration-ms="942" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyEmptyUNvalidationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:14 IST" name="tearDown" finished-at="2022-12-25T18:34:14 IST" duration-ms="217" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:28 IST" name="setup" finished-at="2022-12-25T18:34:35 IST" duration-ms="7174" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyPasswordValidationTest()[pri:2, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:35 IST" name="verifyPasswordValidationTest" finished-at="2022-12-25T18:34:40 IST" duration-ms="4577" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyPasswordValidationTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:40 IST" name="tearDown" finished-at="2022-12-25T18:34:40 IST" duration-ms="231" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:48 IST" name="setup" finished-at="2022-12-25T18:34:54 IST" duration-ms="5699" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyInvalidAlertTest()[pri:3, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:54 IST" name="verifyInvalidAlertTest" finished-at="2022-12-25T18:34:57 IST" duration-ms="2761" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyInvalidAlertTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:34:57 IST" name="tearDown" finished-at="2022-12-25T18:34:57 IST" duration-ms="185" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:35:02 IST" name="setup" finished-at="2022-12-25T18:35:07 IST" duration-ms="4920" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="loginLogoutTest()[pri:4, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:35:07 IST" name="loginLogoutTest" finished-at="2022-12-25T18:35:12 IST" duration-ms="4538" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginLogoutTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentTwoTest@4a883b15]" started-at="2022-12-25T18:35:12 IST" name="tearDown" finished-at="2022-12-25T18:35:12 IST" duration-ms="245" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- come.qa.testcases.AssignmentTwoTest -->
+    </test> <!-- ChromeTest -->
+  </suite> <!-- Suite -->
 </testng-results>
