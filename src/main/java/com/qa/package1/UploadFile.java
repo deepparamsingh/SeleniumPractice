@@ -3,15 +3,12 @@ package com.qa.package1;
 import java.awt.Robot;
 import java.awt.Toolkit;
 import java.awt.datatransfer.StringSelection;
-import java.awt.event.ActionEvent;
 import java.awt.event.KeyEvent;
 
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-import org.openxmlformats.schemas.drawingml.x2006.main.ThemeDocument;
-
 import com.qa.base.Testbase;
 
 public class UploadFile extends Testbase {

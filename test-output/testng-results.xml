@@ -2,20 +2,20 @@
 <testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-26T17:53:27 IST" name="Default suite" finished-at="2022-12-26T17:53:42 IST" duration-ms="14552">
+  <suite started-at="2022-12-28T23:26:31 IST" name="Default suite" finished-at="2022-12-28T23:26:52 IST" duration-ms="20406">
     <groups>
     </groups>
-    <test started-at="2022-12-26T17:53:27 IST" name="Default test" finished-at="2022-12-26T17:53:42 IST" duration-ms="14552">
-      <class name="come.qa.testcases.UploadFileTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.UploadFileTest@48e1f6c7]" started-at="2022-12-26T17:53:27 IST" name="setup" finished-at="2022-12-26T17:53:36 IST" duration-ms="8998" status="PASS">
+    <test started-at="2022-12-28T23:26:31 IST" name="Default test" finished-at="2022-12-28T23:26:52 IST" duration-ms="20406">
+      <class name="come.qa.testcases.BrokenLinksGenericTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.BrokenLinksGenericTest@3cce5371]" started-at="2022-12-28T23:26:31 IST" name="setup" finished-at="2022-12-28T23:26:41 IST" duration-ms="9526" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="uploadFileTest()[pri:1, instance:come.qa.testcases.UploadFileTest@48e1f6c7]" started-at="2022-12-26T17:53:36 IST" name="uploadFileTest" finished-at="2022-12-26T17:53:42 IST" duration-ms="5506" status="PASS">
+        <test-method signature="uploadFileTest()[pri:1, instance:come.qa.testcases.BrokenLinksGenericTest@3cce5371]" started-at="2022-12-28T23:26:41 IST" name="uploadFileTest" finished-at="2022-12-28T23:26:52 IST" duration-ms="10829" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- uploadFileTest -->
-      </class> <!-- come.qa.testcases.UploadFileTest -->
+      </class> <!-- come.qa.testcases.BrokenLinksGenericTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>
