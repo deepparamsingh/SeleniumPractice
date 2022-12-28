@@ -1,84 +1,61 @@
-2022-12-25 20:17:51,068 DEBUG [main] InternalLoggerFactory:89 - Using Log4J as the default logging framework
-2022-12-25 20:17:51,078 DEBUG [main] ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
-2022-12-25 20:17:51,079 DEBUG [main] ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
-2022-12-25 20:17:51,086 DEBUG [main] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@2a2bb0eb
-2022-12-25 20:17:51,123 DEBUG [main] PlatformDependent0:496 - -Dio.netty.noUnsafe: false
-2022-12-25 20:17:51,123 DEBUG [main] PlatformDependent0:1000 - Java version: 17
-2022-12-25 20:17:51,126 DEBUG [main] PlatformDependent0:137 - sun.misc.Unsafe.theUnsafe: available
-2022-12-25 20:17:51,129 DEBUG [main] PlatformDependent0:161 - sun.misc.Unsafe.copyMemory: available
-2022-12-25 20:17:51,131 DEBUG [main] PlatformDependent0:193 - sun.misc.Unsafe.storeFence: available
-2022-12-25 20:17:51,132 DEBUG [main] PlatformDependent0:236 - java.nio.Buffer.address: available
-2022-12-25 20:17:51,133 DEBUG [main] PlatformDependent0:320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
-2022-12-25 20:17:51,135 DEBUG [main] PlatformDependent0:385 - java.nio.Bits.unaligned: available, true
-2022-12-25 20:17:51,137 DEBUG [main] PlatformDependent0:452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @3551a94
-2022-12-25 20:17:51,139 DEBUG [main] PlatformDependent0:482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
-2022-12-25 20:17:51,140 DEBUG [main] PlatformDependent:1159 - sun.misc.Unsafe: available
-2022-12-25 20:17:51,158 DEBUG [main] PlatformDependent:1270 - maxDirectMemory: 3198156800 bytes (maybe)
-2022-12-25 20:17:51,160 DEBUG [main] PlatformDependent:1289 - -Dio.netty.tmpdir: C:\Users\KB100~1.JGD\AppData\Local\Temp (java.io.tmpdir)
-2022-12-25 20:17:51,161 DEBUG [main] PlatformDependent:1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
-2022-12-25 20:17:51,164 DEBUG [main] PlatformDependent:1119 - Platform: Windows
-2022-12-25 20:17:51,166 DEBUG [main] PlatformDependent:178 - -Dio.netty.maxDirectMemory: -1 bytes
-2022-12-25 20:17:51,166 DEBUG [main] PlatformDependent:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
-2022-12-25 20:17:51,169 DEBUG [main] CleanerJava9:71 - java.nio.ByteBuffer.cleaner(): available
-2022-12-25 20:17:51,170 DEBUG [main] PlatformDependent:205 - -Dio.netty.noPreferDirect: false
-2022-12-25 20:17:51,182 DEBUG [main] PlatformDependent:1010 - org.jctools-core.MpscChunkedArrayQueue: available
-2022-12-25 20:17:51,217 DEBUG [main] InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
-2022-12-25 20:17:51,218 DEBUG [main] InternalThreadLocalMap:89 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
-2022-12-25 20:17:51,318 DEBUG [main] JdkSslContext:83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
-2022-12-25 20:17:51,319 DEBUG [main] JdkSslContext:84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
-2022-12-25 20:17:51,353 DEBUG [main] MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
-2022-12-25 20:17:51,364 DEBUG [main] NioEventLoop:110 - -Dio.netty.noKeySetOptimization: false
-2022-12-25 20:17:51,365 DEBUG [main] NioEventLoop:111 - -Dio.netty.selectorAutoRebuildThreshold: 512
-2022-12-25 20:17:51,426 DEBUG [main] PooledByteBufAllocator:157 - -Dio.netty.allocator.numHeapArenas: 8
-2022-12-25 20:17:51,427 DEBUG [main] PooledByteBufAllocator:158 - -Dio.netty.allocator.numDirectArenas: 8
-2022-12-25 20:17:51,430 DEBUG [main] PooledByteBufAllocator:160 - -Dio.netty.allocator.pageSize: 8192
-2022-12-25 20:17:51,430 DEBUG [main] PooledByteBufAllocator:165 - -Dio.netty.allocator.maxOrder: 9
-2022-12-25 20:17:51,432 DEBUG [main] PooledByteBufAllocator:169 - -Dio.netty.allocator.chunkSize: 4194304
-2022-12-25 20:17:51,433 DEBUG [main] PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
-2022-12-25 20:17:51,434 DEBUG [main] PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
-2022-12-25 20:17:51,434 DEBUG [main] PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
-2022-12-25 20:17:51,435 DEBUG [main] PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
-2022-12-25 20:17:51,436 DEBUG [main] PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
-2022-12-25 20:17:51,444 DEBUG [main] PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: false
-2022-12-25 20:17:51,446 DEBUG [main] PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
-2022-12-25 20:17:51,468 DEBUG [main] ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
-2022-12-25 20:17:51,468 DEBUG [main] ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
-2022-12-25 20:17:51,469 DEBUG [main] ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
-2022-12-25 20:17:51,904 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:79 - -Dio.netty.processId: 6928 (auto-detected)
-2022-12-25 20:17:51,907 DEBUG [Forwarding newSession on session null to remote] NetUtil:136 - -Djava.net.preferIPv4Stack: false
-2022-12-25 20:17:51,908 DEBUG [Forwarding newSession on session null to remote] NetUtil:137 - -Djava.net.preferIPv6Addresses: false
-2022-12-25 20:17:51,918 DEBUG [Forwarding newSession on session null to remote] NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
-2022-12-25 20:17:51,919 DEBUG [Forwarding newSession on session null to remote] NetUtil:191 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
-2022-12-25 20:17:51,951 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:101 - -Dio.netty.machineId: a0:d3:7a:ff:fe:78:4d:76 (auto-detected)
-2022-12-25 20:17:52,007 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
-2022-12-25 20:17:52,007 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
-2022-12-25 20:17:52,008 DEBUG [AsyncHttpClient-1-2] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@32509a1b
-2022-12-25 20:17:52,032 DEBUG [AsyncHttpClient-1-2] Recycler:85 - -Dio.netty.recycler.maxCapacityPerThread: 4096
-2022-12-25 20:17:52,033 DEBUG [AsyncHttpClient-1-2] Recycler:86 - -Dio.netty.recycler.ratio: 8
-2022-12-25 20:17:52,033 DEBUG [AsyncHttpClient-1-2] Recycler:87 - -Dio.netty.recycler.chunkSize: 32
-2022-12-25 20:17:52,033 DEBUG [AsyncHttpClient-1-2] Recycler:88 - -Dio.netty.recycler.blocking: false
-2022-12-25 20:17:52,983 DEBUG [AsyncHttpClient-1-2] Brotli:38 - brotli4j not in the classpath; Brotli support will be unavailable.
-2022-12-25 20:17:53,158 DEBUG [main] ThreadLocalRandom:214 - -Dio.netty.initialSeedUniquifier: 0xb0ee6357965ddf5b
-2022-12-25 20:17:57,069  INFO [main] AssignmentThreeTest:38 - Enter user name
-2022-12-25 20:17:57,765  INFO [main] AssignmentThreeTest:41 - Enter password
-2022-12-25 20:17:57,955  INFO [main] AssignmentThreeTest:44 - Click on LOGIN button
-2022-12-25 20:17:58,176  INFO [main] AssignmentThreeTest:47 - Click on PIM tab
-2022-12-25 20:18:00,965  INFO [main] Helper:45 - Current URL contains :pim
-2022-12-25 20:18:00,967  INFO [main] AssignmentThreeTest:51 - Click on Admin
-2022-12-25 20:18:02,577  INFO [main] Helper:45 - Current URL contains :admin
-2022-12-25 20:18:02,578  INFO [main] AssignmentThreeTest:55 - Click on Leave button
-2022-12-25 20:18:03,885  INFO [main] Helper:45 - Current URL contains :leave
-2022-12-25 20:18:09,820  INFO [main] AssignmentThreeTest:62 - Enter user name
-2022-12-25 20:18:10,574  INFO [main] AssignmentThreeTest:65 - Enter password
-2022-12-25 20:18:10,759  INFO [main] AssignmentThreeTest:68 - Click on LOGIN button
-2022-12-25 20:18:13,779  INFO [main] AssignmentThree:48 - Admin equals to Admin
-2022-12-25 20:18:13,845  INFO [main] AssignmentThree:48 - PIM equals to PIM
-2022-12-25 20:18:13,897  INFO [main] AssignmentThree:48 - Leave equals to Leave
-2022-12-25 20:18:13,946  INFO [main] AssignmentThree:48 - Time equals to Time
-2022-12-25 20:18:13,996  INFO [main] AssignmentThree:48 - Recruitment equals to Recruitment
-2022-12-25 20:18:14,068  INFO [main] AssignmentThree:48 - My Info equals to My Info
-2022-12-25 20:18:14,257  INFO [main] AssignmentThree:48 - Performance equals to Performance
-2022-12-25 20:18:14,352  INFO [main] AssignmentThree:48 - Dashboard equals to Dashboard
-2022-12-25 20:18:14,411  INFO [main] AssignmentThree:48 - Directory equals to Directory
-2022-12-25 20:18:14,460  INFO [main] AssignmentThree:48 - Maintenance equals to Maintenance
-2022-12-25 20:18:14,519  INFO [main] AssignmentThree:48 - Buzz equals to Buzz
+2022-12-27 15:39:22,693 DEBUG [main] InternalLoggerFactory:89 - Using Log4J as the default logging framework
+2022-12-27 15:39:22,709 DEBUG [main] ResourceLeakDetector:129 - -Dio.netty.leakDetection.level: simple
+2022-12-27 15:39:22,709 DEBUG [main] ResourceLeakDetector:130 - -Dio.netty.leakDetection.targetRecords: 4
+2022-12-27 15:39:22,723 DEBUG [main] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@4b85880b
+2022-12-27 15:39:22,779 DEBUG [main] PlatformDependent0:496 - -Dio.netty.noUnsafe: false
+2022-12-27 15:39:22,780 DEBUG [main] PlatformDependent0:1000 - Java version: 17
+2022-12-27 15:39:22,785 DEBUG [main] PlatformDependent0:137 - sun.misc.Unsafe.theUnsafe: available
+2022-12-27 15:39:22,786 DEBUG [main] PlatformDependent0:161 - sun.misc.Unsafe.copyMemory: available
+2022-12-27 15:39:22,787 DEBUG [main] PlatformDependent0:193 - sun.misc.Unsafe.storeFence: available
+2022-12-27 15:39:22,789 DEBUG [main] PlatformDependent0:236 - java.nio.Buffer.address: available
+2022-12-27 15:39:22,791 DEBUG [main] PlatformDependent0:320 - direct buffer constructor: unavailable: Reflective setAccessible(true) disabled
+2022-12-27 15:39:22,792 DEBUG [main] PlatformDependent0:385 - java.nio.Bits.unaligned: available, true
+2022-12-27 15:39:22,794 DEBUG [main] PlatformDependent0:452 - jdk.internal.misc.Unsafe.allocateUninitializedArray(int): unavailable: class io.netty.util.internal.PlatformDependent0$7 cannot access class jdk.internal.misc.Unsafe (in module java.base) because module java.base does not export jdk.internal.misc to unnamed module @6da00fb9
+2022-12-27 15:39:22,796 DEBUG [main] PlatformDependent0:482 - java.nio.DirectByteBuffer.<init>(long, int): unavailable
+2022-12-27 15:39:22,796 DEBUG [main] PlatformDependent:1159 - sun.misc.Unsafe: available
+2022-12-27 15:39:22,864 DEBUG [main] PlatformDependent:1270 - maxDirectMemory: 3198156800 bytes (maybe)
+2022-12-27 15:39:22,868 DEBUG [main] PlatformDependent:1289 - -Dio.netty.tmpdir: C:\Users\KB100~1.JGD\AppData\Local\Temp (java.io.tmpdir)
+2022-12-27 15:39:22,869 DEBUG [main] PlatformDependent:1368 - -Dio.netty.bitMode: 64 (sun.arch.data.model)
+2022-12-27 15:39:22,870 DEBUG [main] PlatformDependent:1119 - Platform: Windows
+2022-12-27 15:39:22,873 DEBUG [main] PlatformDependent:178 - -Dio.netty.maxDirectMemory: -1 bytes
+2022-12-27 15:39:22,874 DEBUG [main] PlatformDependent:185 - -Dio.netty.uninitializedArrayAllocationThreshold: -1
+2022-12-27 15:39:22,877 DEBUG [main] CleanerJava9:71 - java.nio.ByteBuffer.cleaner(): available
+2022-12-27 15:39:22,877 DEBUG [main] PlatformDependent:205 - -Dio.netty.noPreferDirect: false
+2022-12-27 15:39:22,893 DEBUG [main] PlatformDependent:1010 - org.jctools-core.MpscChunkedArrayQueue: available
+2022-12-27 15:39:22,933 DEBUG [main] InternalThreadLocalMap:86 - -Dio.netty.threadLocalMap.stringBuilder.initialSize: 1024
+2022-12-27 15:39:22,934 DEBUG [main] InternalThreadLocalMap:89 - -Dio.netty.threadLocalMap.stringBuilder.maxSize: 4096
+2022-12-27 15:39:22,966 DEBUG [main] JdkSslContext:83 - Default protocols (JDK): [TLSv1.3, TLSv1.2] 
+2022-12-27 15:39:22,967 DEBUG [main] JdkSslContext:84 - Default cipher suites (JDK): [TLS_ECDHE_ECDSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_ECDSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_128_GCM_SHA256, TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384, TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA, TLS_ECDHE_RSA_WITH_AES_256_CBC_SHA, TLS_RSA_WITH_AES_128_GCM_SHA256, TLS_RSA_WITH_AES_128_CBC_SHA, TLS_RSA_WITH_AES_256_CBC_SHA, TLS_AES_128_GCM_SHA256, TLS_AES_256_GCM_SHA384]
+2022-12-27 15:39:23,036 DEBUG [main] MultithreadEventLoopGroup:44 - -Dio.netty.eventLoopThreads: 8
+2022-12-27 15:39:23,054 DEBUG [main] NioEventLoop:110 - -Dio.netty.noKeySetOptimization: false
+2022-12-27 15:39:23,054 DEBUG [main] NioEventLoop:111 - -Dio.netty.selectorAutoRebuildThreshold: 512
+2022-12-27 15:39:23,134 DEBUG [main] PooledByteBufAllocator:157 - -Dio.netty.allocator.numHeapArenas: 8
+2022-12-27 15:39:23,135 DEBUG [main] PooledByteBufAllocator:158 - -Dio.netty.allocator.numDirectArenas: 8
+2022-12-27 15:39:23,136 DEBUG [main] PooledByteBufAllocator:160 - -Dio.netty.allocator.pageSize: 8192
+2022-12-27 15:39:23,136 DEBUG [main] PooledByteBufAllocator:165 - -Dio.netty.allocator.maxOrder: 9
+2022-12-27 15:39:23,137 DEBUG [main] PooledByteBufAllocator:169 - -Dio.netty.allocator.chunkSize: 4194304
+2022-12-27 15:39:23,137 DEBUG [main] PooledByteBufAllocator:170 - -Dio.netty.allocator.smallCacheSize: 256
+2022-12-27 15:39:23,138 DEBUG [main] PooledByteBufAllocator:171 - -Dio.netty.allocator.normalCacheSize: 64
+2022-12-27 15:39:23,139 DEBUG [main] PooledByteBufAllocator:172 - -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+2022-12-27 15:39:23,139 DEBUG [main] PooledByteBufAllocator:173 - -Dio.netty.allocator.cacheTrimInterval: 8192
+2022-12-27 15:39:23,140 DEBUG [main] PooledByteBufAllocator:174 - -Dio.netty.allocator.cacheTrimIntervalMillis: 0
+2022-12-27 15:39:23,141 DEBUG [main] PooledByteBufAllocator:175 - -Dio.netty.allocator.useCacheForAllThreads: false
+2022-12-27 15:39:23,141 DEBUG [main] PooledByteBufAllocator:176 - -Dio.netty.allocator.maxCachedByteBuffersPerChunk: 1023
+2022-12-27 15:39:23,167 DEBUG [main] ByteBufUtil:87 - -Dio.netty.allocator.type: pooled
+2022-12-27 15:39:23,167 DEBUG [main] ByteBufUtil:96 - -Dio.netty.threadLocalDirectBufferSize: 0
+2022-12-27 15:39:23,168 DEBUG [main] ByteBufUtil:99 - -Dio.netty.maxThreadLocalCharBufferSize: 16384
+2022-12-27 15:39:24,364 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:79 - -Dio.netty.processId: 10396 (auto-detected)
+2022-12-27 15:39:24,366 DEBUG [Forwarding newSession on session null to remote] NetUtil:136 - -Djava.net.preferIPv4Stack: false
+2022-12-27 15:39:24,367 DEBUG [Forwarding newSession on session null to remote] NetUtil:137 - -Djava.net.preferIPv6Addresses: false
+2022-12-27 15:39:24,376 DEBUG [Forwarding newSession on session null to remote] NetUtilInitializations:129 - Loopback interface: lo (Software Loopback Interface 1, 127.0.0.1)
+2022-12-27 15:39:24,378 DEBUG [Forwarding newSession on session null to remote] NetUtil:191 - Failed to get SOMAXCONN from sysctl and file \proc\sys\net\core\somaxconn. Default: 200
+2022-12-27 15:39:24,412 DEBUG [Forwarding newSession on session null to remote] DefaultChannelId:101 - -Dio.netty.machineId: a0:d3:7a:ff:fe:78:4d:76 (auto-detected)
+2022-12-27 15:39:24,490 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:63 - -Dio.netty.buffer.checkAccessible: true
+2022-12-27 15:39:24,490 DEBUG [AsyncHttpClient-1-2] AbstractByteBuf:64 - -Dio.netty.buffer.checkBounds: true
+2022-12-27 15:39:24,491 DEBUG [AsyncHttpClient-1-2] ResourceLeakDetectorFactory:196 - Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@23d37110
+2022-12-27 15:39:24,527 DEBUG [AsyncHttpClient-1-2] Recycler:85 - -Dio.netty.recycler.maxCapacityPerThread: 4096
+2022-12-27 15:39:24,527 DEBUG [AsyncHttpClient-1-2] Recycler:86 - -Dio.netty.recycler.ratio: 8
+2022-12-27 15:39:24,528 DEBUG [AsyncHttpClient-1-2] Recycler:87 - -Dio.netty.recycler.chunkSize: 32
+2022-12-27 15:39:24,528 DEBUG [AsyncHttpClient-1-2] Recycler:88 - -Dio.netty.recycler.blocking: false
+2022-12-27 15:39:25,588 DEBUG [AsyncHttpClient-1-2] Brotli:38 - brotli4j not in the classpath; Brotli support will be unavailable.
+2022-12-27 15:39:25,758 DEBUG [main] ThreadLocalRandom:214 - -Dio.netty.initialSeedUniquifier: 0xb7d5e4dc30a115df

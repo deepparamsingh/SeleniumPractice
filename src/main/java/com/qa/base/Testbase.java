@@ -92,7 +92,7 @@ public class Testbase {
 		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT,TimeUnit.SECONDS);
 		
 		
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("uploadFile_url"));
 		
 	}
 
