@@ -10,119 +10,107 @@ import org.openqa.selenium.support.PageFactory;
 import com.qa.base.Testbase;
 
 public class Helper extends Testbase {
-	
+
 	Logger log = Logger.getLogger(Helper.class);
-	
-	@FindBy(xpath="//button[@type='submit']")
+
+	@FindBy(xpath = "//button[@type='submit']")
 	WebElement loginButton;
-	
-	@FindBy(xpath="//li[@class='oxd-userdropdown']")
+
+	@FindBy(xpath = "//li[@class='oxd-userdropdown']")
 	WebElement userImg;
-	
-	@FindBy(xpath="//a[normalize-space()='Logout']")
+
+	@FindBy(xpath = "//a[normalize-space()='Logout']")
 	WebElement logOut;
-	
-	@FindBy(css="*[class*='oxd-input-field-error-message']")
+
+	@FindBy(css = "*[class*='oxd-input-field-error-message']")
 	WebElement inputFieldsValidation;
-	
-	
-	public Helper()
-	{
+
+	// ---- Add new user --------
+	// ------- Add new Admin/ESS user -----------
+	public WebElement newUser(String user) {
+
+		WebElement addNewUser = driver.findElement(By.xpath("//div[@role='listbox']//*[text()=" + user + "]"));
+		return addNewUser;
+
+	}
+
+	// ------- Set user status to Enabled/Disabled -----------
+	public WebElement newUserStatus(String status) {
+
+		WebElement userStatus = driver
+				.findElement(By.xpath("//div[@class='oxd-select-option']//*[text()=" + status + "]"));
+		return userStatus;
+	}
+
+	public Helper() {
 		PageFactory.initElements(driver, this);
 	}
-	
-	
-	public String captureURL()
-	{
+
+	public String captureURL() {
 		return driver.getCurrentUrl();
 	}
-	
-	
-	public boolean isCurrentURLcontains(String word)
-	{
-		if(captureURL().contains(word))
-		{
-			log.info("Current URL contains :"+word);
+
+	public boolean isCurrentURLcontains(String word) {
+		if (captureURL().contains(word)) {
+			log.info("Current URL contains :" + word);
 			return true;
 		}
 		return false;
 	}
 
-	
-	public boolean URLEndsWith(String word)
-	{
-		if(captureURL().endsWith(word))
-		{
+	public boolean URLEndsWith(String word) {
+		if (captureURL().endsWith(word)) {
 			return true;
 		}
-		return false;		
+		return false;
 	}
-	
-	
-	public String captureURLTitle()
-	{
+
+	public String captureURLTitle() {
 		return driver.getTitle();
 	}
-	
 
-	public boolean verifyTitleContains(String word)
-	{
-		
-		if(captureURLTitle().contains(word))
-		{
+	public boolean verifyTitleContains(String word) {
+
+		if (captureURLTitle().contains(word)) {
 			return true;
 		}
-		return false;		
+		return false;
 	}
-	
-	
-	public void clickLoginBTN()
-	{
+
+	public void clickLoginBTN() {
 		waitForElementToBeVisible(driver, loginButton, Duration.ofSeconds(3));
 		clickOn(driver, loginButton, Duration.ofSeconds(5));
 	}
-	
-	
-	public boolean verifyEmptyLoginvalidation() throws Throwable
-	{
-		
+
+	public boolean verifyEmptyLoginvalidation() throws Throwable {
+
 		waitForElementToBeVisible(driver, inputFieldsValidation, Duration.ofSeconds(3));
-		String validationMsg= inputFieldsValidation.getText();
+		String validationMsg = inputFieldsValidation.getText();
 		boolean value = validationMsg.equals("Required");
-		return value;			
+		return value;
 	}
-		
-	
-	public boolean userImage()
-	{
+
+	public boolean userImage() {
 		waitForElementToBeVisible(driver, userImg, Duration.ofSeconds(5));
-		if(userImg.isDisplayed())
-		{
+		if (userImg.isDisplayed()) {
 			return true;
 		}
 		return false;
 	}
-	
-	
-	public void clickYourProfileImg() 
-	{
+
+	public void clickYourProfileImg() {
 		userImg.click();
 	}
-	
-	
-	public void logOut()
-	{
+
+	public void logOut() {
 		logOut.click();
 	}
-	
-	public void clickTab(String tab) throws Throwable
-	{
-		WebElement selectTab = driver.findElement(By.xpath("//span[normalize-space()='"+tab+"']"));
+
+	public void clickTab(String tab) throws Throwable {
+		WebElement selectTab = driver.findElement(By.xpath("//span[normalize-space()='" + tab + "']"));
 		waitForElementToBeVisible(driver, selectTab, Duration.ofSeconds(5));
 		selectTab.click();
-		//Thread.sleep(5000);
+		// Thread.sleep(5000);
 	}
-	
-	
 
 }

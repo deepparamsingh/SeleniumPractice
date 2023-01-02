@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-12-28T23:26:31 IST" name="Default suite" finished-at="2022-12-28T23:26:52 IST" duration-ms="20406">
+  <suite started-at="2023-01-02T20:41:05 IST" name="Default suite" finished-at="2023-01-02T20:41:22 IST" duration-ms="17024">
     <groups>
     </groups>
-    <test started-at="2022-12-28T23:26:31 IST" name="Default test" finished-at="2022-12-28T23:26:52 IST" duration-ms="20406">
-      <class name="come.qa.testcases.BrokenLinksGenericTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.BrokenLinksGenericTest@3cce5371]" started-at="2022-12-28T23:26:31 IST" name="setup" finished-at="2022-12-28T23:26:41 IST" duration-ms="9526" status="PASS">
+    <test started-at="2023-01-02T20:41:05 IST" name="Default test" finished-at="2023-01-02T20:41:22 IST" duration-ms="17024">
+      <class name="come.qa.testcases.AssignmentThreeTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentThreeTest@194fad1]" started-at="2023-01-02T20:41:05 IST" name="setup" finished-at="2023-01-02T20:41:12 IST" duration-ms="7465" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="uploadFileTest()[pri:1, instance:come.qa.testcases.BrokenLinksGenericTest@3cce5371]" started-at="2022-12-28T23:26:41 IST" name="uploadFileTest" finished-at="2022-12-28T23:26:52 IST" duration-ms="10829" status="PASS">
+        <test-method signature="empNameDDlistTest()[pri:3, instance:come.qa.testcases.AssignmentThreeTest@194fad1]" started-at="2023-01-02T20:41:12 IST" name="empNameDDlistTest" finished-at="2023-01-02T20:41:21 IST" duration-ms="9215" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- uploadFileTest -->
-      </class> <!-- come.qa.testcases.BrokenLinksGenericTest -->
+        </test-method> <!-- empNameDDlistTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentThreeTest@194fad1]" started-at="2023-01-02T20:41:21 IST" name="tearDown" finished-at="2023-01-02T20:41:22 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- come.qa.testcases.AssignmentThreeTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

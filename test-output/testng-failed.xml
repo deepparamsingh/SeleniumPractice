@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="come.qa.testcases.UploadFileTest">
+      <class name="come.qa.testcases.AssignmentThreeTest">
         <methods>
-          <include name="uploadFileTest"/>
           <include name="setup"/>
+          <include name="empNameDDlistTest"/>
+          <include name="tearDown"/>
         </methods>
-      </class> <!-- come.qa.testcases.UploadFileTest -->
+      </class> <!-- come.qa.testcases.AssignmentThreeTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

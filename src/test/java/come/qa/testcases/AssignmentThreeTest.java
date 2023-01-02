@@ -70,6 +70,24 @@ public class AssignmentThreeTest extends Testbase {
 
 		Assert.assertTrue(assignmentThree.verifyTabListwithActual());
 	}
+	
+	@Test(priority = 3)
+	public void empNameDDlistTest() throws Throwable {
+		log.info("Enter user name");
+		assignmentTwo.enterUserName("admin");
+
+		log.info("Enter password");
+		assignmentTwo.enterPassword("admin123");
+
+		log.info("Click on LOGIN button");
+		help.clickLoginBTN();
+		
+		log.info("Click on Admin");
+		help.clickTab("Admin");
+		Assert.assertTrue(help.isCurrentURLcontains("admin"));
+
+		assignmentThree.empNameDDlist();
+	}
 
 	@AfterMethod
 	public void tearDown() {
