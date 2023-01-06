@@ -88,6 +88,25 @@ public class AssignmentThreeTest extends Testbase {
 
 		assignmentThree.empNameDDlist();
 	}
+	
+	@Test(priority = 4)
+	public void addNewUserTest() throws Throwable {
+		log.info("Enter user name");
+		assignmentTwo.enterUserName("admin");
+
+		log.info("Enter password");
+		assignmentTwo.enterPassword("admin123");
+
+		log.info("Click on LOGIN button");
+		help.clickLoginBTN();
+		
+		log.info("Click on Admin");
+		help.clickTab("Admin");
+		Assert.assertTrue(help.isCurrentURLcontains("admin"));
+
+		assignmentThree.addNewUser();
+	}
+
 
 	@AfterMethod
 	public void tearDown() {

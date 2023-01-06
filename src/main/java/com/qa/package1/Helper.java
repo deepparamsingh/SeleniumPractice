@@ -25,22 +25,7 @@ public class Helper extends Testbase {
 	@FindBy(css = "*[class*='oxd-input-field-error-message']")
 	WebElement inputFieldsValidation;
 
-	// ---- Add new user --------
-	// ------- Add new Admin/ESS user -----------
-	public WebElement newUser(String user) {
-
-		WebElement addNewUser = driver.findElement(By.xpath("//div[@role='listbox']//*[text()=" + user + "]"));
-		return addNewUser;
-
-	}
-
-	// ------- Set user status to Enabled/Disabled -----------
-	public WebElement newUserStatus(String status) {
-
-		WebElement userStatus = driver
-				.findElement(By.xpath("//div[@class='oxd-select-option']//*[text()=" + status + "]"));
-		return userStatus;
-	}
+	
 
 	public Helper() {
 		PageFactory.initElements(driver, this);

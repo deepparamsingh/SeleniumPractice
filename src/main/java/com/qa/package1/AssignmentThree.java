@@ -5,6 +5,7 @@ import java.util.Arrays;
 import java.util.List;
 
 import org.apache.log4j.Logger;
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
@@ -32,6 +33,18 @@ public class AssignmentThree extends Testbase {
 
 	@FindBy(xpath = "//div[@role='listbox']//div[2]")
 	WebElement selectUser;
+
+	@FindBy(xpath = "(//div[@tabindex='0'])[1]")
+	WebElement userRole;
+
+	@FindBy(xpath = "(//div[@tabindex='0'])[2]")
+	WebElement userStatus;
+
+	@FindBy(xpath = "(//input[@type='password'])[1]")
+	WebElement userPassword;
+
+	@FindBy(xpath = "(//input[@type='password'])[2]")
+	WebElement userConfirmPassword;
 
 	String[] array = { "Admin", "PIM", "Leave", "Time", "Recruitment", "My Info", "Performance", "Dashboard",
 			"Directory", "Maintenance", "Buzz" };
@@ -68,10 +81,34 @@ public class AssignmentThree extends Testbase {
 		selectUser.click();
 
 	}
-	
-	public void addNewUser()
-	{
-		
-		
+
+	/*---- Add new user --------
+	      Add new Admin/ESS user
+	 */
+	public void newUser(String user) {
+
+		WebElement addNewUser = driver.findElement(By.xpath("//div[@role='listbox']//*[text()='" + user + "']"));
+		addNewUser.click();
+
+	}
+
+	// ------- Set user status to Enabled/Disabled -----------
+	public void newUserStatus(String status) {
+
+		WebElement userStatus = driver
+				.findElement(By.xpath("//div[@class='oxd-select-option']//*[text()='" + status + "']"));
+		userStatus.click();
+	}
+
+	public void addNewUser() throws Throwable {
+		addUserButton.click();
+		userRole.click();
+		Thread.sleep(1000);
+		newUser("Admin");
+		userStatus.click();
+		newUserStatus("Enabled");
+		empNameDDlist();
+		userPassword.sendKeys("admin123");
+		userConfirmPassword.sendKeys("admin123");
 	}
 }
