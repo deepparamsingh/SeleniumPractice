@@ -5,8 +5,8 @@
     <classes>
       <class name="come.qa.testcases.SwitchToWindowsTest">
         <methods>
-          <include name="Test"/>
           <include name="setup"/>
+          <include name="Test1"/>
         </methods>
       </class> <!-- come.qa.testcases.SwitchToWindowsTest -->
     </classes>

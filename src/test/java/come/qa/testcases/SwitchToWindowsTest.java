@@ -12,11 +12,10 @@ import com.qa.package1.Helper;
 import com.qa.package1.SwitchToWindows;
 
 public class SwitchToWindowsTest extends Testbase {
-	
+
 	Logger log = Logger.getLogger(AssignmentThreeTest.class);
 
 	SwitchToWindows switchToWindows;
-	
 
 	public SwitchToWindowsTest() {
 
@@ -28,14 +27,19 @@ public class SwitchToWindowsTest extends Testbase {
 	public void setup() {
 		initialization();
 		switchToWindows = new SwitchToWindows();
-		
+
 	}
 
 	@Test(priority = 1)
 	public void Test() throws Throwable {
-		
+
 		switchToWindows.verifySocialLinks();
 	}
 
+	@Test(priority = 2)
+	public void Test1() throws Throwable {
+
+		switchToWindows.switchByPageTitle("TwITtEr");
+	}
 
 }
