@@ -2,6 +2,7 @@ package come.qa.testcases;
 
 import org.apache.log4j.Logger;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
 
@@ -31,15 +32,20 @@ public class SwitchToWindowsTest extends Testbase {
 	}
 
 	@Test(priority = 1)
-	public void Test() throws Throwable {
+	public void verifySocialLinksTest() throws Throwable {
 
 		switchToWindows.verifySocialLinks();
 	}
 
 	@Test(priority = 2)
-	public void Test1() throws Throwable {
+	public void switchByPageTitleTest() throws Throwable {
 
 		switchToWindows.switchByPageTitle("TwITtEr");
+	}
+
+	@AfterMethod
+	public void tearDown() {
+		driver.quit();
 	}
 
 }
