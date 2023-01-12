@@ -60,7 +60,7 @@ public class AssignmentTwo extends Testbase {
 	public boolean verifyInvalidAlert()
 	{
 		
-		waitForElementToBeVisible(driver, invalidCred, Duration.ofSeconds(5000));
+		Helper.waitForElementToBeVisible(driver, invalidCred, Duration.ofSeconds(5000));
 		if(invalidCred.isDisplayed())
 		{
 			String invalidCredMSG=invalidCred.getText();

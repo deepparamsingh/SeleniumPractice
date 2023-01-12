@@ -4,9 +4,13 @@ import java.time.Duration;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
+
 import com.qa.base.Testbase;
 
 public class Helper extends Testbase {
@@ -24,8 +28,6 @@ public class Helper extends Testbase {
 
 	@FindBy(css = "*[class*='oxd-input-field-error-message']")
 	WebElement inputFieldsValidation;
-
-	
 
 	public Helper() {
 		PageFactory.initElements(driver, this);
@@ -96,6 +98,43 @@ public class Helper extends Testbase {
 		waitForElementToBeVisible(driver, selectTab, Duration.ofSeconds(5));
 		selectTab.click();
 		// Thread.sleep(5000);
+	}
+
+	public static WebElement waitForElementToBeVisible(WebDriver driver, WebElement webElement, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		WebElement element = wait.until(ExpectedConditions.visibilityOf(webElement));
+		return element;
+	}
+
+	public static Boolean waitTillTitleContains(WebDriver driver, String text, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		Boolean element = wait.until(ExpectedConditions.titleContains(text));
+		return element;
+	}
+
+	public static Boolean waitTillUrlContains(WebDriver driver, String text, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		Boolean element = wait.until(ExpectedConditions.urlContains(text));
+		return element;
+	}
+
+	public static Boolean waitForElementToBeInvisibile(WebDriver driver, WebElement webElement, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		Boolean element = wait.until(ExpectedConditions.invisibilityOf(webElement));
+		return element;
+	}
+
+	public static Boolean waitTillTextToBe(WebDriver driver, By locator, String text, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		Boolean element = wait.until(ExpectedConditions.textToBe(locator, text));
+		return element;
+	}
+
+	public static WebElement waitTillFrameToBeAvailableAndSwitchToIt(WebDriver driver, WebElement webElement,
+			Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		WebElement element = wait.until(ExpectedConditions.visibilityOf(webElement));
+		return element;
 	}
 
 }

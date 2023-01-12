@@ -28,103 +28,82 @@ import com.qa.util.TestUtil;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Testbase {
-	
+
 	public static WebDriver driver;
 	public static Properties prop;
-	
-	//public static Logger logger;
-	
-	
-	
-	
-	public Testbase()
-	{
+
+	// public static Logger logger;
+
+	public Testbase() {
 		try {
 			prop = new Properties();
-			
-			String property_file="/src/main/java/com/qa/config/config.properties";
-			String currentPath = System. getProperty("user.dir");
-			FileInputStream ip= new FileInputStream(currentPath + property_file);
+
+			String property_file = "/src/main/java/com/qa/config/config.properties";
+			String currentPath = System.getProperty("user.dir");
+			FileInputStream ip = new FileInputStream(currentPath + property_file);
 			prop.load(ip);
-		}
-		catch (FileLockInterruptionException e) {
+		} catch (FileLockInterruptionException e) {
 			e.printStackTrace();
 			// TODO: handle exception
-		}
-		catch (IOException e) {
+		} catch (IOException e) {
 			// TODO: handle exception
 			e.printStackTrace();
 		}
 	}
-	
-	
-	public static void initialization()
-	{
-		String browserName= prop.getProperty("browser");
-		
-		if(browserName.equals("chrome")) {
-			
+
+	public static void initialization() {
+		String browserName = prop.getProperty("browser");
+
+		if (browserName.equalsIgnoreCase("chrome")) {
+
 			WebDriverManager.chromedriver().setup();
-						
+
 			ChromeOptions opt = new ChromeOptions();
 			Map<String, Object> prefs = new HashMap<String, Object>();
-		    prefs.put("credentials_enable_service", false);
-		    prefs.put("profile.password_manager_enabled", false);
-		    opt.setExperimentalOption("prefs", prefs);
-			opt.setExperimentalOption("excludeSwitches",Arrays.asList("disable-popup-blocking","enable-automation")); 
-			driver= new ChromeDriver(opt);
-			
-		}
-		else if(browserName.equals("firefox"))
-		{
+			prefs.put("credentials_enable_service", false);
+			prefs.put("profile.password_manager_enabled", false);
+			opt.setExperimentalOption("prefs", prefs);
+			opt.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking", "enable-automation"));
+			driver = new ChromeDriver(opt);
+
+		} else if (browserName.equalsIgnoreCase("firefox")) {
 			WebDriverManager.firefoxdriver().setup();
-			driver= new FirefoxDriver();
-		}
-		else if(browserName.equals("edge"))
-		{
+			driver = new FirefoxDriver();
+		} else if (browserName.equalsIgnoreCase("edge")) {
 			WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
-		
+
 		driver.manage().window().maximize();
 		driver.manage().deleteAllCookies();
-		driver.manage().timeouts().pageLoadTimeout(TestUtil.PAGE_LOAD_TIMEOUT,TimeUnit.SECONDS);
-		driver.manage().timeouts().implicitlyWait(TestUtil.IMPLICIT_WAIT,TimeUnit.SECONDS);
-		
-		
+		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
+		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(60));
+
 		driver.get(prop.getProperty("url"));
-		
+
 	}
 
-	public static void sendKeys(WebDriver driver, WebElement element, Duration timeout, String value)
-	{
+	public static void sendKeys(WebDriver driver, WebElement element, Duration timeout, String value) {
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.visibilityOf(element));
 		element.sendKeys(value);
 	}
-	public static void clickOn(WebDriver driver, WebElement element, Duration timeout)
-	{
+
+	public static void clickOn(WebDriver driver, WebElement element, Duration timeout) {
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
-	
+
 	}
-	public static void takeScreenShot(String filename) throws Throwable
-	{
-		File file = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file, new File("C:/Users/paramdeep/git/eyenus_BroadBand/eyenus/ScreenShots/"+filename+".jpg"));
-		
+
+	public static void takeScreenShot(String filename) throws Throwable {
+		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(file,
+				new File("C:/Users/paramdeep/git/eyenus_BroadBand/eyenus/ScreenShots/" + filename + ".jpg"));
+
 	}
-	
-	public static WebElement waitForElementToBeVisible(WebDriver driver, WebElement webElement, Duration seconds )
-	{
-		WebDriverWait wait = new WebDriverWait(driver, seconds);
-		WebElement element = wait.until(ExpectedConditions.visibilityOf(webElement));
-		return element;
-	}
-	public static String getTextvalue(WebElement element)
-	{
+
+	public static String getTextvalue(WebElement element) {
 		String text = element.getText();
 		return text;
 	}
 
 }
- 
