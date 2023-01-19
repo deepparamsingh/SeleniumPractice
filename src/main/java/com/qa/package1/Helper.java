@@ -1,11 +1,17 @@
 package com.qa.package1;
 
+import java.io.File;
+import java.text.SimpleDateFormat;
 import java.time.Duration;
+import java.util.Date;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -136,5 +142,24 @@ public class Helper extends Testbase {
 		WebElement element = wait.until(ExpectedConditions.visibilityOf(webElement));
 		return element;
 	}
+
+	public static void takeScreenShot() throws Throwable {
+		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
+		File destination = new File("./screenshots/" + getCurrentTimeStamp() + ".jpg");
+		FileHandler.copy(src, destination);
+
+	}
+
+	public static String getCurrentTimeStamp() {
+		String date = new SimpleDateFormat("dd_MM_yyyy_HH_mm_ss").format(new Date());
+		return date;
+	}
+
+	public static String takeScreenShotUsingBase64(WebDriver driver) {
+		String src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
+		return src;
+	}
+	
+	
 
 }

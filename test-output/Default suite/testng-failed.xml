@@ -3,12 +3,13 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="come.qa.testcases.SwitchToWindowsTest">
+      <class name="come.qa.testcases.ScreenShotTest">
         <methods>
           <include name="setup"/>
-          <include name="Test1"/>
+          <include name="tearDown"/>
+          <include name="VerifyScreenShotTest"/>
         </methods>
-      </class> <!-- come.qa.testcases.SwitchToWindowsTest -->
+      </class> <!-- come.qa.testcases.ScreenShotTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

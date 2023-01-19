@@ -31,6 +31,7 @@ public class AssignmentOne extends Testbase {
 	public boolean verifySiteLogo() throws Throwable {
 		Helper.waitForElementToBeVisible(driver, siteLOGO, Duration.ofSeconds(10));
 		if (siteLOGO.isDisplayed()) {
+			Helper.takeScreenShot();
 			return true;
 		}
 		return false;

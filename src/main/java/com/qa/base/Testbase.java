@@ -20,6 +20,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
@@ -64,6 +65,7 @@ public class Testbase {
 			prefs.put("profile.password_manager_enabled", false);
 			opt.setExperimentalOption("prefs", prefs);
 			opt.setExperimentalOption("excludeSwitches", Arrays.asList("disable-popup-blocking", "enable-automation"));
+			opt.addArguments("start-maximized", "--incognito");
 			driver = new ChromeDriver(opt);
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
@@ -79,7 +81,7 @@ public class Testbase {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(60));
 
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("rediff"));
 
 	}
 
@@ -91,13 +93,6 @@ public class Testbase {
 	public static void clickOn(WebDriver driver, WebElement element, Duration timeout) {
 		new WebDriverWait(driver, timeout).until(ExpectedConditions.elementToBeClickable(element));
 		element.click();
-
-	}
-
-	public static void takeScreenShot(String filename) throws Throwable {
-		File file = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
-		FileUtils.copyFile(file,
-				new File("C:/Users/paramdeep/git/eyenus_BroadBand/eyenus/ScreenShots/" + filename + ".jpg"));
 
 	}
 
