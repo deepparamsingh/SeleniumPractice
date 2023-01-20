@@ -1,9 +1,16 @@
 package com.qa.package1;
 
+import java.awt.Dimension;
+import java.awt.Rectangle;
+import java.awt.Robot;
+import java.awt.Toolkit;
+import java.awt.image.BufferedImage;
 import java.io.File;
 import java.text.SimpleDateFormat;
 import java.time.Duration;
 import java.util.Date;
+
+import javax.imageio.ImageIO;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
@@ -143,7 +150,7 @@ public class Helper extends Testbase {
 		return element;
 	}
 
-	public static void takeScreenShot() throws Throwable {
+	public static void takeScreenShot(WebDriver driver) throws Throwable {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
 		File destination = new File("./screenshots/" + getCurrentTimeStamp() + ".jpg");
 		FileHandler.copy(src, destination);
@@ -159,7 +166,27 @@ public class Helper extends Testbase {
 		String src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.BASE64);
 		return src;
 	}
-	
-	
+
+	public static void takeScreenShotWithAlert() throws Throwable {
+		Robot robot = new Robot();
+		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+		Rectangle rect = new Rectangle(dimension);
+		BufferedImage bufferedImage = robot.createScreenCapture(rect);
+		String screenshotPath = "./screenshots/" + getCurrentTimeStamp() + ".jpg";
+		ImageIO.write(bufferedImage, "png", new File(screenshotPath));
+		System.out.println(driver.switchTo().alert().getText());
+		driver.switchTo().alert().accept();
+
+	}
+
+	public static void takeScreenShotWithURL() throws Throwable {
+		Robot robot = new Robot();
+		Dimension dimension = Toolkit.getDefaultToolkit().getScreenSize();
+		Rectangle rect = new Rectangle(dimension);
+		BufferedImage bufferedImage = robot.createScreenCapture(rect);
+		String screenshotPath = "./screenshots/" + getCurrentTimeStamp() + ".jpg";
+		ImageIO.write(bufferedImage, "png", new File(screenshotPath));
+
+	}
 
 }

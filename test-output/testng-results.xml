@@ -1,25 +1,25 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="6" total="7" passed="1" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-01-19T21:49:31 IST" name="Default suite" finished-at="2023-01-19T21:49:37 IST" duration-ms="6049">
+  <suite started-at="2023-01-21T00:30:24 IST" name="Default suite" finished-at="2023-01-21T00:30:31 IST" duration-ms="7505">
     <groups>
     </groups>
-    <test started-at="2023-01-19T21:49:31 IST" name="Default test" finished-at="2023-01-19T21:49:37 IST" duration-ms="6049">
-      <class name="come.qa.testcases.ScreenShotTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.ScreenShotTest@55cb6996]" started-at="2023-01-19T21:49:31 IST" name="setup" finished-at="2023-01-19T21:49:36 IST" duration-ms="5090" status="PASS">
+    <test started-at="2023-01-21T00:30:24 IST" name="Default test" finished-at="2023-01-21T00:30:31 IST" duration-ms="7505">
+      <class name="come.qa.testcases.AssignmentOneTest">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.AssignmentOneTest@72c8e7b]" started-at="2023-01-21T00:30:24 IST" name="setup" finished-at="2023-01-21T00:30:30 IST" duration-ms="6027" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="VerifyScreenShotTest()[pri:1, instance:come.qa.testcases.ScreenShotTest@55cb6996]" started-at="2023-01-19T21:49:36 IST" name="VerifyScreenShotTest" finished-at="2023-01-19T21:49:36 IST" duration-ms="589" status="PASS">
+        <test-method signature="verifySiteLogoTest()[pri:2, instance:come.qa.testcases.AssignmentOneTest@72c8e7b]" started-at="2023-01-21T00:30:30 IST" name="verifySiteLogoTest" finished-at="2023-01-21T00:30:31 IST" duration-ms="1164" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- VerifyScreenShotTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.ScreenShotTest@55cb6996]" started-at="2023-01-19T21:49:36 IST" name="tearDown" finished-at="2023-01-19T21:49:37 IST" duration-ms="296" status="PASS">
+        </test-method> <!-- verifySiteLogoTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.AssignmentOneTest@72c8e7b]" started-at="2023-01-21T00:30:31 IST" name="tearDown" finished-at="2023-01-21T00:30:31 IST" duration-ms="265" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- come.qa.testcases.ScreenShotTest -->
+      </class> <!-- come.qa.testcases.AssignmentOneTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->
 </testng-results>

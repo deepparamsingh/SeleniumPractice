@@ -1,12 +1,6 @@
 package com.qa.package1;
 
-import java.net.URL;
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
-
-import javax.net.ssl.HttpsURLConnection;
-
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;

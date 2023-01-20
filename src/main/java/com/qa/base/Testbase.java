@@ -1,6 +1,5 @@
 package com.qa.base;
 
-import java.io.File;
 import java.io.FileInputStream;
 import java.io.IOException;
 import java.nio.channels.FileLockInterruptionException;
@@ -9,22 +8,14 @@ import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.Properties;
-import java.util.concurrent.TimeUnit;
-
-import org.apache.commons.io.FileUtils;
-import org.openqa.selenium.OutputType;
-import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.edge.EdgeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
-import org.openqa.selenium.io.FileHandler;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
-
-import com.qa.util.TestUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -81,7 +72,7 @@ public class Testbase {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(60));
 
-		driver.get(prop.getProperty("rediff"));
+		driver.get(prop.getProperty("url"));
 
 	}
 
