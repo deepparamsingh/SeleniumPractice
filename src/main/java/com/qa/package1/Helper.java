@@ -14,6 +14,7 @@ import javax.imageio.ImageIO;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
@@ -149,6 +150,11 @@ public class Helper extends Testbase {
 		WebElement element = wait.until(ExpectedConditions.visibilityOf(webElement));
 		return element;
 	}
+	public static WebElement waitTillElementToBeClickable(WebDriver driver,WebElement webElement, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(webElement));
+		return element;
+	}
 
 	public static void takeScreenShot(WebDriver driver) throws Throwable {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -188,5 +194,62 @@ public class Helper extends Testbase {
 		ImageIO.write(bufferedImage, "png", new File(screenshotPath));
 
 	}
+	
+	public static void clickOnElement(WebDriver driver,By locator)
+	{
+		
+		try 
+		{
+			driver.findElement(locator).click();
+			
+		} catch (Exception e) 
+		{
+			
+			System.out.println("Normal Click Failed - Clicking using JS");
+			
+			waitForSeconds(2);
+			
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			
+			js.executeScript("arguments[0].click()", driver.findElement(locator));
+
+		}
+		
+	}
+	
+	public static void type(WebDriver driver,By locator,String text)
+	{
+	
+		try 
+		{
+			driver.findElement(locator).sendKeys(text);
+			
+		} catch (Exception e) 
+		{
+			
+			System.out.println("WebElement sendKeys Failed - Setting value using JS");
+			
+			waitForSeconds(2);
+			
+			JavascriptExecutor js=(JavascriptExecutor)driver;
+			
+			js.executeScript("arguments[0].value=arguments[1]", driver.findElement(locator),text);
+
+		}
+		
+	}
+	
+	public static void waitForSeconds(int seconds)
+	{
+		//System.out.println("Waiting for "+seconds+" seconds");
+		
+		try 
+		{
+			Thread.sleep(seconds*1000);
+		} catch (InterruptedException e) {
+			
+		}	
+	}
+	
 
 }

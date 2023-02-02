@@ -72,7 +72,7 @@ public class Testbase {
 		driver.manage().timeouts().pageLoadTimeout(Duration.ofSeconds(60));
 		driver.manage().timeouts().scriptTimeout(Duration.ofSeconds(60));
 
-		driver.get(prop.getProperty("url"));
+		driver.get(prop.getProperty("classTest"));
 
 	}
 
