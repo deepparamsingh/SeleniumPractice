@@ -78,17 +78,59 @@ public class FirstTest extends Testbase {
 		log.info("Click and select category");
 		Assert.assertEquals(first.chooseCatorgy("Automation Testing"),
 				"https://freelance-learn-automation.vercel.app/course/manage");
-		
+
 		log.info("Verify count of the course list");
 		first.verifyAfterCourseCount();
-		
+
 		log.info("Verify course added successfully");
 		Assert.assertTrue(first.matchCourseCount());
+
+	
+	}
+	
+	
+	@Test(priority = 4, enabled = false)
+	public void deleteCourseTest() throws Throwable {
+		log.info("Click on side nav bar and click on login");
+		Assert.assertEquals(first.verifyUserLandToLoginPage(), "https://freelance-learn-automation.vercel.app/login");
+
+		log.info("Enter the credentials");
+		first.enterCred();
+
+		log.info("Verify Welcome message");
+		Assert.assertTrue(first.verifyWelcomeMessage());
+
+		log.info("Hover to manage Tab and click on manage courses");
+		first.hoverToMangeTab();
+		
+		log.info("Delete the last entred record");
+		first.deleteCourse();
+	}
+	
+	@Test(priority = 5)
+	public void signOutTest() throws Throwable {
+		log.info("Click on side nav bar and click on login");
+		Assert.assertEquals(first.verifyUserLandToLoginPage(), "https://freelance-learn-automation.vercel.app/login");
+
+		log.info("Enter the credentials");
+		first.enterCred();
+
+		log.info("Verify Welcome message");
+		Assert.assertTrue(first.verifyWelcomeMessage());
+
+		log.info("Hover to manage Tab and click on manage courses");
+		first.hoverToMangeTab();
+		
+//		log.info("Delete the last entred record");
+//		first.deleteCourse();
+		
+		log.info("User Sign out");
+		Assert.assertEquals(first.signOut(), "https://freelance-learn-automation.vercel.app/login");
 	}
 
 	@AfterMethod
 	public void tearDown() {
-		// driver.quit();
+		driver.quit();
 	}
 
 }

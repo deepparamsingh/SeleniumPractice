@@ -1,25 +1,61 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="2" total="3" passed="1" failed="0" skipped="0">
+<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-02T11:53:53 IST" name="Default suite" finished-at="2023-02-02T11:54:07 IST" duration-ms="13966">
+  <suite started-at="2023-02-02T23:49:41 IST" name="Suite" finished-at="2023-02-02T23:50:16 IST" duration-ms="35310">
     <groups>
     </groups>
-    <test started-at="2023-02-02T11:53:53 IST" name="Default test" finished-at="2023-02-02T11:54:07 IST" duration-ms="13966">
+    <test started-at="2023-02-02T23:49:41 IST" name="Test" finished-at="2023-02-02T23:50:16 IST" duration-ms="35310">
       <class name="come.qa.testcases.FirstTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@55cb6996]" started-at="2023-02-02T11:53:53 IST" name="setup" finished-at="2023-02-02T11:53:57 IST" duration-ms="3918" status="PASS">
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:41 IST" name="setup" finished-at="2023-02-02T23:49:45 IST" duration-ms="3839" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method signature="addCourseTest()[pri:3, instance:come.qa.testcases.FirstTest@55cb6996]" started-at="2023-02-02T11:53:57 IST" name="addCourseTest" finished-at="2023-02-02T11:54:07 IST" duration-ms="9987" status="PASS">
+        <test-method signature="verifyTitleContainsTest()[pri:1, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:45 IST" name="verifyTitleContainsTest" finished-at="2023-02-02T23:49:45 IST" duration-ms="30" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyTitleContainsTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:45 IST" name="tearDown" finished-at="2023-02-02T23:49:45 IST" duration-ms="365" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:45 IST" name="setup" finished-at="2023-02-02T23:49:47 IST" duration-ms="1594" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="verifyUserLandToLoginPageTest()[pri:2, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:47 IST" name="verifyUserLandToLoginPageTest" finished-at="2023-02-02T23:49:53 IST" duration-ms="6095" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- verifyUserLandToLoginPageTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:53 IST" name="tearDown" finished-at="2023-02-02T23:49:53 IST" duration-ms="282" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:53 IST" name="setup" finished-at="2023-02-02T23:49:55 IST" duration-ms="1804" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="addCourseTest()[pri:3, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:55 IST" name="addCourseTest" finished-at="2023-02-02T23:50:05 IST" duration-ms="9644" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- addCourseTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@55cb6996]" started-at="2023-02-02T11:54:07 IST" name="tearDown" finished-at="2023-02-02T11:54:07 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:05 IST" name="tearDown" finished-at="2023-02-02T23:50:05 IST" duration-ms="251" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:05 IST" name="setup" finished-at="2023-02-02T23:50:06 IST" duration-ms="1552" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setup -->
+        <test-method signature="signOutTest()[pri:5, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:06 IST" name="signOutTest" finished-at="2023-02-02T23:50:16 IST" duration-ms="9527" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- signOutTest -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:16 IST" name="tearDown" finished-at="2023-02-02T23:50:16 IST" duration-ms="261" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- come.qa.testcases.FirstTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    </test> <!-- Test -->
+  </suite> <!-- Suite -->
 </testng-results>

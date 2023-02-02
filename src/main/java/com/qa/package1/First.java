@@ -5,6 +5,8 @@ import java.util.List;
 
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
+import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -17,12 +19,16 @@ import com.qa.base.Testbase;
 public class First extends Testbase {
 
 	Logger log = Logger.getLogger(First.class);
+	JavascriptExecutor js = (JavascriptExecutor) driver;
 
 	@FindBy(xpath = "//span[@class='navbar-toggler-icon']")
 	WebElement navBar;
 
 	@FindBy(xpath = "//button[normalize-space()='Log in']")
 	WebElement loginBTN;
+
+	@FindBy(xpath = "//button[normalize-space()='Sign out']")
+	WebElement signOutBTN;
 
 	@FindBy(xpath = "//button[@aria-label='Close']")
 	WebElement crossNavBar;
@@ -102,6 +108,12 @@ public class First extends Testbase {
 	@FindBy(xpath = "//tbody//tr")
 	List<WebElement> tableRow;
 
+	@FindBy(xpath = "//tbody//tr[7]//td[12]//button")
+	WebElement deleteBtn;
+
+	@FindBy(xpath = "//thead//th")
+	List<WebElement> tableColumn;
+
 	public int beforeCount;
 	public int afterCount;
 
@@ -114,9 +126,9 @@ public class First extends Testbase {
 		Helper.waitForElementToBeVisible(driver, navBar, Duration.ofSeconds(10));
 		if (navBar.isDisplayed()) {
 			navBar.click();
-			Helper.waitForElementToBeVisible(driver, loginBTN, Duration.ofSeconds(10));
+			Helper.waitTillElementToBeClickable(driver, loginBTN, Duration.ofSeconds(10));
 			loginBTN.click();
-			Helper.waitForElementToBeVisible(driver, crossNavBar, Duration.ofSeconds(10));
+			Helper.waitTillElementToBeClickable(driver, crossNavBar, Duration.ofSeconds(10));
 			crossNavBar.click();
 			Thread.sleep(1000);
 			System.out.println(driver.getCurrentUrl());
@@ -135,7 +147,6 @@ public class First extends Testbase {
 		passwordInput.sendKeys("admin@123");
 		Helper.waitTillElementToBeClickable(driver, signInBTN, Duration.ofSeconds(10));
 		signInBTN.click();
-		
 
 	}
 
@@ -153,15 +164,15 @@ public class First extends Testbase {
 		Helper.waitForElementToBeVisible(driver, manageTab, Duration.ofSeconds(10));
 		Actions actions = new Actions(driver);
 		actions.moveToElement(manageTab).perform();
-		Helper.waitForElementToBeVisible(driver, manageCourses, Duration.ofSeconds(10));
+		Helper.waitTillElementToBeClickable(driver, manageCourses, Duration.ofSeconds(10));
 		manageCourses.click();
 
 	}
 
 	public void fillFormToAddCourse() throws Throwable {
-		Helper.waitForElementToBeVisible(driver, addCourse, Duration.ofSeconds(10));
+		Helper.waitTillElementToBeClickable(driver, addCourse, Duration.ofSeconds(10));
 		addCourse.click();
-		Helper.waitForElementToBeVisible(driver, selectThumbnail, Duration.ofSeconds(10));
+		Helper.waitTillElementToBeClickable(driver, selectThumbnail, Duration.ofSeconds(10));
 		String imagePath = System.getProperty("user.dir") + "/src/main/resources/science_of_selenium.jpg";
 		selectThumbnail.sendKeys(imagePath);
 
@@ -227,10 +238,10 @@ public class First extends Testbase {
 
 	public String chooseCatorgy(String user) {
 		selectCategory.click();
-		Helper.waitForElementToBeVisible(driver, categoryMenuItem, Duration.ofSeconds(10));
+		Helper.waitTillElementToBeClickable(driver, categoryMenuItem, Duration.ofSeconds(10));
 		WebElement selectItem = driver.findElement(By.xpath("//button[normalize-space()='" + user + "']"));
 		selectItem.click();
-		Helper.waitForElementToBeVisible(driver, saveCourse, Duration.ofSeconds(10));
+		Helper.waitTillElementToBeClickable(driver, saveCourse, Duration.ofSeconds(10));
 		saveCourse.click();
 		return driver.getCurrentUrl();
 
@@ -246,23 +257,57 @@ public class First extends Testbase {
 	public void verifyAfterCourseCount() {
 		Helper.waitForElementToBeVisible(driver, table, Duration.ofSeconds(10));
 		WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(5));
-		List<WebElement> totalCourse=wait.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//tbody//tr"), beforeCount+1));
+		List<WebElement> totalCourse = wait
+				.until(ExpectedConditions.numberOfElementsToBe(By.xpath("//tbody//tr"), beforeCount + 1));
 		log.info("Count of couse after adding new course :" + totalCourse.size());
 		afterCount = totalCourse.size();
-			
-	}
-	
-	
 
-	public boolean matchCourseCount()
-	{
-		if(beforeCount<afterCount)
-		{
+	}
+
+	public boolean matchCourseCount() {
+		if (beforeCount < afterCount) {
 			log.info("Course Added sucessfully !!!");
 			return true;
 		}
 		return false;
-		
+
+	}
+
+	public void deleteCourse() throws Throwable {
+		Helper.waitForElementToBeVisible(driver, table, Duration.ofSeconds(10));
+		System.out.println(tableRow.size());
+		System.out.println(tableColumn.size());
+		Thread.sleep(3000);
+
+		WebElement dltLastCourse = driver
+				.findElement(By.xpath("//tbody//tr[" + tableRow.size() + "]//td[" + tableColumn.size() + "]//button"));
+		// Thread.sleep(5000);
+		// js.executeScript("arguments[0].scrollIntoView(true);",dltLastCourse);
+		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
+		// js.executeScript("window.scrollTo(0,550)", "");
+		// js.executeScript("window.scrollBy(0,2000)");
+		// WebElement dltLastCourse=
+		// driver.findElement(By.xpath("//tbody//tr[5]//td[12]//button"));
+
+//		Actions actionObject = new Actions(driver);
+//		actionObject.sendKeys(Keys.ARROW_DOWN).build().perform();
+
+		dltLastCourse.click();
+		Thread.sleep(3000);
+		System.out.println(tableRow.size());
+		System.out.println(tableColumn.size());
+
+	}
+	
+	public String signOut() throws Throwable
+	{
+		navBar.click();
+		Helper.waitTillElementToBeClickable(driver, signOutBTN, Duration.ofSeconds(10));
+		signOutBTN.click();
+		Helper.waitTillElementToBeClickable(driver, crossNavBar, Duration.ofSeconds(10));
+		crossNavBar.click();
+		Thread.sleep(3000);
+		return driver.getCurrentUrl();
 	}
 
 }

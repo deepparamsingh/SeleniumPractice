@@ -7,7 +7,7 @@
         <methods>
           <include name="setup"/>
           <include name="tearDown"/>
-          <include name="addCourseTest"/>
+          <include name="signOutTest"/>
         </methods>
       </class> <!-- come.qa.testcases.FirstTest -->
     </classes>
