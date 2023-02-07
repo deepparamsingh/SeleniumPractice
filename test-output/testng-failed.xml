@@ -3,13 +3,11 @@
 <suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="come.qa.testcases.FirstTest">
+      <class name="come.qa.testcases.DataProviderSeleniumTest">
         <methods>
-          <include name="setup"/>
-          <include name="tearDown"/>
-          <include name="signOutTest"/>
+          <include name="test1"/>
         </methods>
-      </class> <!-- come.qa.testcases.FirstTest -->
+      </class> <!-- come.qa.testcases.DataProviderSeleniumTest -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

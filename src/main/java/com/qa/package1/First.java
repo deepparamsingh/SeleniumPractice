@@ -6,7 +6,6 @@ import java.util.List;
 import org.apache.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.JavascriptExecutor;
-import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.FindBy;
@@ -39,8 +38,10 @@ public class First extends Testbase {
 	@FindBy(xpath = "//input[@id='password1']")
 	WebElement passwordInput;
 
-	@FindBy(xpath = "//button[normalize-space()='Sign in']")
-	WebElement signInBTN;
+//	@FindBy(xpath = "//button[normalize-space()='Sign in']")
+//	WebElement signInBTN;
+	
+	By signIn = By.xpath("//button[normalize-space()='Sign in']");
 
 	@FindBy(xpath = "//h1[normalize-space()='Learn Automation Courses']")
 	WebElement h1Heading;
@@ -145,8 +146,9 @@ public class First extends Testbase {
 		emailInput.sendKeys("admin@email.com");
 		Helper.waitForElementToBeVisible(driver, passwordInput, Duration.ofSeconds(10));
 		passwordInput.sendKeys("admin@123");
-		Helper.waitTillElementToBeClickable(driver, signInBTN, Duration.ofSeconds(10));
-		signInBTN.click();
+		//Helper.waitTillElementToBeClickable(driver, signInBTN, Duration.ofSeconds(10));
+		//signInBTN.click();
+		Helper.clickOnElement(driver, signIn);
 
 	}
 
@@ -279,28 +281,21 @@ public class First extends Testbase {
 		System.out.println(tableColumn.size());
 		Thread.sleep(3000);
 
-		WebElement dltLastCourse = driver
-				.findElement(By.xpath("//tbody//tr[" + tableRow.size() + "]//td[" + tableColumn.size() + "]//button"));
-		// Thread.sleep(5000);
-		// js.executeScript("arguments[0].scrollIntoView(true);",dltLastCourse);
+//		WebElement dltLastCourse = driver
+//				.findElement(By.xpath("//tbody//tr[" + tableRow.size() + "]//td[" + tableColumn.size() + "]//button"));
+
+		By dltLastCourse = By.xpath("//tbody//tr[" + tableRow.size() + "]//td[" + tableColumn.size() + "]//button");
+
 		js.executeScript("window.scrollBy(0,document.body.scrollHeight)");
-		// js.executeScript("window.scrollTo(0,550)", "");
-		// js.executeScript("window.scrollBy(0,2000)");
-		// WebElement dltLastCourse=
-		// driver.findElement(By.xpath("//tbody//tr[5]//td[12]//button"));
 
-//		Actions actionObject = new Actions(driver);
-//		actionObject.sendKeys(Keys.ARROW_DOWN).build().perform();
-
-		dltLastCourse.click();
-		Thread.sleep(3000);
+		Helper.clickOnElement(driver, dltLastCourse);
+		Helper.waitForElementToBeVisible(driver, table, Duration.ofSeconds(10));
 		System.out.println(tableRow.size());
 		System.out.println(tableColumn.size());
 
 	}
-	
-	public String signOut() throws Throwable
-	{
+
+	public String signOut() throws Throwable {
 		navBar.click();
 		Helper.waitTillElementToBeClickable(driver, signOutBTN, Duration.ofSeconds(10));
 		signOutBTN.click();

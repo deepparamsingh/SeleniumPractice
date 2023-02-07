@@ -89,7 +89,7 @@ public class FirstTest extends Testbase {
 	}
 	
 	
-	@Test(priority = 4, enabled = false)
+	@Test(priority = 4)
 	public void deleteCourseTest() throws Throwable {
 		log.info("Click on side nav bar and click on login");
 		Assert.assertEquals(first.verifyUserLandToLoginPage(), "https://freelance-learn-automation.vercel.app/login");
@@ -120,9 +120,6 @@ public class FirstTest extends Testbase {
 
 		log.info("Hover to manage Tab and click on manage courses");
 		first.hoverToMangeTab();
-		
-//		log.info("Delete the last entred record");
-//		first.deleteCourse();
 		
 		log.info("User Sign out");
 		Assert.assertEquals(first.signOut(), "https://freelance-learn-automation.vercel.app/login");

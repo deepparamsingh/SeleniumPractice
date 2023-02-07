@@ -17,7 +17,6 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class Testbase {
 
@@ -48,7 +47,7 @@ public class Testbase {
 
 		if (browserName.equalsIgnoreCase("chrome")) {
 
-			WebDriverManager.chromedriver().setup();
+			//WebDriverManager.chromedriver().setup();
 
 			ChromeOptions opt = new ChromeOptions();
 			Map<String, Object> prefs = new HashMap<String, Object>();
@@ -60,10 +59,10 @@ public class Testbase {
 			driver = new ChromeDriver(opt);
 
 		} else if (browserName.equalsIgnoreCase("firefox")) {
-			WebDriverManager.firefoxdriver().setup();
+			//WebDriverManager.firefoxdriver().setup();
 			driver = new FirefoxDriver();
 		} else if (browserName.equalsIgnoreCase("edge")) {
-			WebDriverManager.edgedriver().setup();
+			//WebDriverManager.edgedriver().setup();
 			driver = new EdgeDriver();
 		}
 

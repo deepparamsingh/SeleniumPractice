@@ -1,61 +1,118 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="1" total="5" passed="4" failed="0" skipped="0">
+<testng-results ignored="0" total="5" passed="5" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2023-02-02T23:49:41 IST" name="Suite" finished-at="2023-02-02T23:50:16 IST" duration-ms="35310">
+  <suite started-at="2023-02-07T22:10:09 IST" name="Default suite" finished-at="2023-02-07T22:10:10 IST" duration-ms="1311">
     <groups>
     </groups>
-    <test started-at="2023-02-02T23:49:41 IST" name="Test" finished-at="2023-02-02T23:50:16 IST" duration-ms="35310">
-      <class name="come.qa.testcases.FirstTest">
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:41 IST" name="setup" finished-at="2023-02-02T23:49:45 IST" duration-ms="3839" status="PASS">
+    <test started-at="2023-02-07T22:10:09 IST" name="Default test" finished-at="2023-02-07T22:10:10 IST" duration-ms="1311">
+      <class name="come.qa.testcases.DataProviderSeleniumTest">
+        <test-method signature="test1(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:come.qa.testcases.DataProviderSeleniumTest@32ee6fee]" started-at="2023-02-07T22:10:10 IST" name="test1" data-provider="credentials" finished-at="2023-02-07T22:10:10 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[param_usr1]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[paramuserone@yopmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyTitleContainsTest()[pri:1, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:45 IST" name="verifyTitleContainsTest" finished-at="2023-02-02T23:49:45 IST" duration-ms="30" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method signature="test1(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:come.qa.testcases.DataProviderSeleniumTest@32ee6fee]" started-at="2023-02-07T22:10:10 IST" name="test1" data-provider="credentials" finished-at="2023-02-07T22:10:10 IST" duration-ms="13" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[param_usr2]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[paramusertwo@yopmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyTitleContainsTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:45 IST" name="tearDown" finished-at="2023-02-02T23:49:45 IST" duration-ms="365" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method signature="test1(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:come.qa.testcases.DataProviderSeleniumTest@32ee6fee]" started-at="2023-02-07T22:10:10 IST" name="test1" data-provider="credentials" finished-at="2023-02-07T22:10:10 IST" duration-ms="10" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[param_usr3]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[paramuserthree@yopmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:45 IST" name="setup" finished-at="2023-02-02T23:49:47 IST" duration-ms="1594" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method signature="test1(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:come.qa.testcases.DataProviderSeleniumTest@32ee6fee]" started-at="2023-02-07T22:10:10 IST" name="test1" data-provider="credentials" finished-at="2023-02-07T22:10:10 IST" duration-ms="8" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[param_usr4]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[paramuserfour@yopmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="verifyUserLandToLoginPageTest()[pri:2, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:47 IST" name="verifyUserLandToLoginPageTest" finished-at="2023-02-02T23:49:53 IST" duration-ms="6095" status="PASS">
+        </test-method> <!-- test1 -->
+        <test-method signature="test1(java.lang.String,java.lang.String,java.lang.String)[pri:0, instance:come.qa.testcases.DataProviderSeleniumTest@32ee6fee]" started-at="2023-02-07T22:10:10 IST" name="test1" data-provider="credentials" finished-at="2023-02-07T22:10:10 IST" duration-ms="6" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[param_usr5]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[paramuserfive@yopmail.com]]>
+              </value>
+            </param>
+            <param index="2">
+              <value>
+                <![CDATA[admin@123]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- verifyUserLandToLoginPageTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:53 IST" name="tearDown" finished-at="2023-02-02T23:49:53 IST" duration-ms="282" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:53 IST" name="setup" finished-at="2023-02-02T23:49:55 IST" duration-ms="1804" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="addCourseTest()[pri:3, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:49:55 IST" name="addCourseTest" finished-at="2023-02-02T23:50:05 IST" duration-ms="9644" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- addCourseTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:05 IST" name="tearDown" finished-at="2023-02-02T23:50:05 IST" duration-ms="251" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method is-config="true" signature="setup()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:05 IST" name="setup" finished-at="2023-02-02T23:50:06 IST" duration-ms="1552" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setup -->
-        <test-method signature="signOutTest()[pri:5, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:06 IST" name="signOutTest" finished-at="2023-02-02T23:50:16 IST" duration-ms="9527" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- signOutTest -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:come.qa.testcases.FirstTest@15a34df2]" started-at="2023-02-02T23:50:16 IST" name="tearDown" finished-at="2023-02-02T23:50:16 IST" duration-ms="261" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- come.qa.testcases.FirstTest -->
-    </test> <!-- Test -->
-  </suite> <!-- Suite -->
+        </test-method> <!-- test1 -->
+      </class> <!-- come.qa.testcases.DataProviderSeleniumTest -->
+    </test> <!-- Default test -->
+  </suite> <!-- Default suite -->
 </testng-results>
