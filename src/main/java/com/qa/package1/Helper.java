@@ -155,6 +155,12 @@ public class Helper extends Testbase {
 		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		return element;
 	}
+	
+	public static WebElement waitTillElementToBeClickable(WebDriver driver,By locator, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(locator));
+		return element;
+	}
 
 	public static void takeScreenShot(WebDriver driver) throws Throwable {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);

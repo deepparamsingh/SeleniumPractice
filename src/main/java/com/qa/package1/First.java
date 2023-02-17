@@ -146,7 +146,7 @@ public class First extends Testbase {
 		emailInput.sendKeys("admin@email.com");
 		Helper.waitForElementToBeVisible(driver, passwordInput, Duration.ofSeconds(10));
 		passwordInput.sendKeys("admin@123");
-		//Helper.waitTillElementToBeClickable(driver, signInBTN, Duration.ofSeconds(10));
+		Helper.waitTillElementToBeClickable(driver, signIn, Duration.ofSeconds(10));
 		//signInBTN.click();
 		Helper.clickOnElement(driver, signIn);
 

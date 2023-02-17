@@ -1,7 +1,26 @@
-2023-02-07 21:31:48,364  INFO [main] FirstTest:36 - Verify your URL title contains this word
-2023-02-07 21:31:50,569  INFO [main] FirstTest:42 - Click on side nav bar and click on login
-2023-02-07 21:31:52,880  INFO [main] FirstTest:45 - Enter the credentials
-2023-02-07 21:31:53,270  INFO [main] FirstTest:48 - Verify Welcome message
-2023-02-07 21:32:06,427  INFO [main] FirstTest:55 - Click on side nav bar and click on login
-2023-02-07 21:32:08,444  INFO [main] FirstTest:58 - Enter the credentials
-2023-02-07 21:32:08,837  INFO [main] FirstTest:61 - Verify Welcome message
+2023-02-10 23:01:32,031  INFO [TestNG-tests-1] AssignmentTwoTest:52 - Verify border value of input field
+2023-02-10 23:01:34,256  INFO [TestNG-tests-1] AssignmentTwoTest:43 - Click on LOGIN button
+2023-02-10 23:01:39,552  INFO [TestNG-tests-1] AssignmentTwoTest:34 - Click on LOGIN button
+2023-02-10 23:01:44,765  INFO [TestNG-tests-1] AssignmentOneTest:46 - Verify your URL title contains this word
+2023-02-10 23:01:46,914  INFO [TestNG-tests-1] AssignmentOneTest:40 - Verify your current URL contains this word
+2023-02-10 23:01:48,814  INFO [TestNG-tests-1] AssignmentOneTest:34 - Verify your current URL end's with this word
+2023-02-10 23:01:50,898  INFO [TestNG-tests-1] AssignmentTwoTest:59 - Enter user name
+2023-02-10 23:01:55,938  INFO [TestNG-tests-1] AssignmentOneTest:52 - Verify that your site logo is visible
+2023-02-10 23:02:08,381  INFO [TestNG-tests-1] AssignmentTwoTest:72 - Enter user name
+2023-02-10 23:02:13,485  INFO [TestNG-tests-1] AssignmentOneTest:59 - Verify that your webpage have all four social media links
+2023-02-10 23:02:13,520  INFO [TestNG-tests-1] AssignmentOne:46 - Total social links are: 0
+2023-02-10 23:02:15,517  INFO [TestNG-tests-1] AssignmentTwoTest:87 - Enter user name
+2023-02-10 23:02:20,565  INFO [TestNG-tests-1] AssignmentOneTest:65 - Verify social links with map
+2023-02-10 23:02:20,594  INFO [TestNG-tests-1] AssignmentOne:85 - {}
+2023-02-10 23:02:22,584  INFO [TestNG-tests-1] AssignmentOneTest:71 - Verify that your social media links have youtube link as well
+2023-02-10 23:02:22,615  INFO [TestNG-tests-1] AssignmentOne:58 - Total social links are: 0
+2023-02-10 23:02:23,546 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2023-02-10 23:02:23,550 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2023-02-10 23:02:23,553 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-02-10 23:02:23,560 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-02-10 23:02:23,564 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/k.jgdahv/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
+2023-02-10 23:02:23,983 DEBUG [main] cache:45 - Couldn't find template in cache for "Extent.ftl"("en_US", UTF-8, parsed); will try to load it.
+2023-02-10 23:02:23,984 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en_US.ftl"): Not found
+2023-02-10 23:02:23,984 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent_en.ftl"): Not found
+2023-02-10 23:02:23,985 DEBUG [main] cache:45 - TemplateLoader.findTemplateSource("Extent.ftl"): Found
+2023-02-10 23:02:23,985 DEBUG [main] cache:45 - Loading template for "Extent.ftl"("en_US", UTF-8, parsed) from "jar:file:/C:/Users/k.jgdahv/.m2/repository/com/relevantcodes/extentreports/2.41.2/extentreports-2.41.2.jar!/com/relevantcodes/extentreports/view/Extent.ftl"
