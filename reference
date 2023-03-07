@@ -1,0 +1,66 @@
+<suite name="Suite">
+	<test name="Test1">
+
+		<parameter name="Browser" value="Chrome"></parameter>
+		<parameter name="appURL" value="https://jupiter.cloud.planittesting.com/#/"></parameter>
+		
+		<classes>
+			<class name="testcases.LoginTest" />
+			<class name="testcases.ContactPageTest" />
+		</classes>
+	</test> 
+	
+	<test name="Test2">
+
+		<parameter name="Browser" value="Edge"></parameter>
+		<parameter name="appURL" value="https://jupiter.cloud.planittesting.com/#/"></parameter>
+		
+		<classes>
+			<class name="testcases.LoginTest" />
+			<class name="testcases.ContactPageTest" />
+		</classes>
+	</test> 
+	
+	<test name="Test3">
+
+		<parameter name="Browser" value="Firefox"></parameter>
+		<parameter name="appURL" value="https://jupiter.cloud.planittesting.com/#/"></parameter>
+		
+		<classes>
+			<class name="testcases.LoginTest" />
+			<class name="testcases.ContactPageTest" />
+		</classes>
+	</test> 
+</suite> 
+
+
+
+================================
+
+
+
+public WebDriver driver;
+	
+	/*
+	 *  1- Need to change of Config file for any changes
+	 *  2- Dynamic- User or Any CI Tool can pass this parameter
+	 * 
+	 */
+	@Parameters({"Browser","appURL"})
+	@BeforeMethod
+	public void setup(String browserName, String applicationUrl)
+	{
+		System.out.println("LOG:INFO - Before Class Executing- Setting up browser");
+		
+		//driver=BrowserFactory.startBrowser(ConfigReader.getProperty("Browser"),ConfigReader.getProperty("jupiterURL"));
+		driver=BrowserFactory.startBrowser(browserName,applicationUrl);
+
+	}
+	
+	@AfterMethod
+	public void tearDown()
+	{
+		System.out.println("LOG:INFO - After Class Executing- Closing browsers");
+		BrowserFactory.closeBrowser(driver);
+	}
+	
