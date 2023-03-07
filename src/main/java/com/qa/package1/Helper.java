@@ -144,23 +144,24 @@ public class Helper extends Testbase {
 		return element;
 	}
 
-	public static WebElement waitTillFrameToBeAvailableAndSwitchToIt(WebDriver driver, WebElement webElement,
-			Duration seconds) {
+	public static void waitTillFrameToBeAvailableAndSwitchToIt(WebDriver driver, String frameName, Duration seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
-		WebElement element = wait.until(ExpectedConditions.visibilityOf(webElement));
+		wait.until(ExpectedConditions.frameToBeAvailableAndSwitchToIt(frameName));
+
+	}
+
+	public static WebElement waitTillElementToBeClickable(WebDriver driver, WebElement webElement, Duration seconds) {
+		WebDriverWait wait = new WebDriverWait(driver, seconds);
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(webElement));
 		return element;
 	}
-	public static WebElement waitTillElementToBeClickable(WebDriver driver,WebElement webElement, Duration seconds) {
+
+	public static WebElement waitTillElementToBeClickable(WebDriver driver, By locator, Duration seconds) {
 		WebDriverWait wait = new WebDriverWait(driver, seconds);
-		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(webElement));
+		WebElement element = wait.until(ExpectedConditions.elementToBeClickable(locator));
 		return element;
 	}
-	
-	public static WebElement waitTillElementToBeClickable(WebDriver driver,By locator, Duration seconds) {
-		WebDriverWait wait = new WebDriverWait(driver, seconds);
-		WebElement element =wait.until(ExpectedConditions.elementToBeClickable(locator));
-		return element;
-	}
+
 
 	public static void takeScreenShot(WebDriver driver) throws Throwable {
 		File src = ((TakesScreenshot) driver).getScreenshotAs(OutputType.FILE);
@@ -200,62 +201,53 @@ public class Helper extends Testbase {
 		ImageIO.write(bufferedImage, "png", new File(screenshotPath));
 
 	}
-	
-	public static void clickOnElement(WebDriver driver,By locator)
-	{
-		
-		try 
-		{
+
+	public static void clickOnElement(WebDriver driver, By locator) {
+
+		try {
 			driver.findElement(locator).click();
-			
-		} catch (Exception e) 
-		{
-			
+
+		} catch (Exception e) {
+
 			System.out.println("Normal Click Failed - Clicking using JS");
-			
+
 			waitForSeconds(2);
-			
-			JavascriptExecutor js=(JavascriptExecutor)driver;
-			
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+
 			js.executeScript("arguments[0].click()", driver.findElement(locator));
 
 		}
-		
+
 	}
-	
-	public static void type(WebDriver driver,By locator,String text)
-	{
-	
-		try 
-		{
+
+	public static void type(WebDriver driver, By locator, String text) {
+
+		try {
 			driver.findElement(locator).sendKeys(text);
-			
-		} catch (Exception e) 
-		{
-			
+
+		} catch (Exception e) {
+
 			System.out.println("WebElement sendKeys Failed - Setting value using JS");
-			
+
 			waitForSeconds(2);
-			
-			JavascriptExecutor js=(JavascriptExecutor)driver;
-			
-			js.executeScript("arguments[0].value=arguments[1]", driver.findElement(locator),text);
+
+			JavascriptExecutor js = (JavascriptExecutor) driver;
+
+			js.executeScript("arguments[0].value=arguments[1]", driver.findElement(locator), text);
 
 		}
-		
+
 	}
-	
-	public static void waitForSeconds(int seconds)
-	{
-		//System.out.println("Waiting for "+seconds+" seconds");
-		
-		try 
-		{
-			Thread.sleep(seconds*1000);
+
+	public static void waitForSeconds(int seconds) {
+		// System.out.println("Waiting for "+seconds+" seconds");
+
+		try {
+			Thread.sleep(seconds * 1000);
 		} catch (InterruptedException e) {
-			
-		}	
+
+		}
 	}
-	
 
 }
